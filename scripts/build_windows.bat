@@ -80,7 +80,8 @@ rem Takes one argument: path to subproject
   echo Removing build artifacts
   for /d %%G in ("build-*") do (rd /s /q "%%~G")
   for %%G in ("*.pro.user") do (del "%%~G")
-  if not "%DOXY%" == "" (
+
+  if not [%DOXY%] == [] (
 	echo Building documentation
 	for %%G in ("*.doxyfile") do (%DOXY% "%%~G")
   )
