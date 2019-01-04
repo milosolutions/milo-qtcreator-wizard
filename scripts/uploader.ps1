@@ -73,16 +73,14 @@ class Uploader {
 
     [void] getToken() {
         $this.token = $( & $($this.curl) -d "username=$($this.user)&password=$($this.password)" "$($this.server)/api2/auth-token/" )
-        if( !$this.token.Contains("token") ) {
-            Write-Host "Could not get token. Server answer: $($this.token)" -foreground red
+		#using regex to match actual token
+        if( $this.token -match  "{`"token`":`"(?<token_content>.*)`"}" ) {
+			$this.token = $Matches['token_content']
+			Write-Host "final token: $($this.token)" -foreground red
+        } else {
+			Write-Host "Could not get token. Server answer: $($this.token)" -foreground red
             exit
-        }
-        Write-Host "Server token answer: $($this.token)" -foreground red
-        # retrieve from token only id number
-        $this.token = $this.token.substring(11, $this.token.Length - 13);
-		Write-Host "final token: $($this.token)" -foreground red
-		Write-Host "user: $($this.user)" -foreground red
-		Write-Host "server $($this.server)" -foreground red
+		}
     }
 
     # check whether $app is installed
@@ -120,9 +118,6 @@ class Uploader {
         }
         else {
             Write-Host "Uploading $($this.file)"
-			Write-Host "file=@$($this.file)"
-			Write-Host "parent_dir=/$($this.directory)"
-			Write-Host "$($this.uploadLink)" -foreground red
             & $($this.curl) -H "Authorization: Token $($this.token)" -F file=@$($this.file) -F filename=$($this.filename) -F "parent_dir=/$($this.directory)" "$($this.uploadLink)"
         }
     }
