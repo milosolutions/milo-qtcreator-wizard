@@ -27,7 +27,7 @@ scripts\build_windows.bat <QtIfwInstallationDir>\bin\binarycreator.exe
 
 QtIFW is included in standard Qt installers from Qt Project (qt.io/downloads). Alternatively, you can compile QtIFW from source - but that is not necessary and will take you much more time.
 
-Doxygen: on Windows, download and install the installer from http://www.stack.nl/~dimitri/doxygen/download.html
+Doxygen: on Windows, download and install the installer from http://www.doxygen.nl/download.html
 On Linux, doxygen is usually available from your package manager, so do something like
 
 ```
