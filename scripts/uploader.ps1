@@ -104,7 +104,9 @@ class Uploader {
         $this.uploadLink = $( & $($this.curl) -H "Authorization: Token $($this.token)" "$($this.server)/api2/repos/$($this.repo)/$($this.operation)/" );
         
         # remove quotes
+		Write-Host "($this.uploadLink)"
         $this.uploadLink = $this.uploadLink.Replace('"',"");
+		Write-Host "($this.uploadLink)"
     }
 
     [void] run() {
