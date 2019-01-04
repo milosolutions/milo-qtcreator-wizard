@@ -81,7 +81,6 @@ function get_token() {
   fi
   #extract same token from answer - we now exactly where it is
   TOKEN=${TOKEN:11:$(expr ${#TOKEN} - 13)}
-  echo "TOKEN : $TOKEN"
 }
 
 function get_link() {
@@ -97,7 +96,6 @@ function get_link() {
   UPLOAD_LINK=$(curl -H "Authorization: Token $TOKEN" $DOMAIN/api2/repos/$REPO_ID/$OPERATION/)
   #get rid of quotas
   UPLOAD_LINK=${UPLOAD_LINK:1:$(expr ${#UPLOAD_LINK} - 2)}
-  echo "Upload link: $UPLOAD_LINK"
 }
 
 function upload() {

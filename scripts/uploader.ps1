@@ -76,7 +76,6 @@ class Uploader {
 		#using regex to match actual token
         if( $this.token -match  "{`"token`":`"(?<token_content>.*)`"}" ) {
 			$this.token = $Matches['token_content']
-			Write-Host "final token: $($this.token)" -foreground red
         } else {
 			Write-Host "Could not get token. Server answer: $($this.token)" -foreground red
             exit
@@ -105,9 +104,7 @@ class Uploader {
         $this.uploadLink = $( & $($this.curl) -H "Authorization: Token $($this.token)" "$($this.server)/api2/repos/$($this.repo)/$($this.operation)/" );
         
         # remove quotes
-		Write-Host "$($this.uploadLink)"
         $this.uploadLink = $this.uploadLink.Replace('"',"");
-		Write-Host "$($this.uploadLink)"
     }
 
     [void] run() {
