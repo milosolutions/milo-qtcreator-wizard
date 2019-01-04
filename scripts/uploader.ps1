@@ -115,6 +115,9 @@ class Uploader {
         }
         else {
             Write-Host "Uploading $($this.file)"
+			Write-Host "file=@$($this.file)"
+			Write-Host "parent_dir=/$($this.directory)"
+			Write-Host "$($this.uploadLink)"
             & $($this.curl) -H "Authorization: Token $($this.token)" -F file=@$($this.file) -F filename=$($this.filename) -F "parent_dir=/$($this.directory)" "$($this.uploadLink)"
         }
     }
