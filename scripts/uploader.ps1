@@ -77,9 +77,12 @@ class Uploader {
             Write-Host "Could not get token. Server answer: $($this.token)" -foreground red
             exit
         }
-        
+        Write-Host "Server token answer: $($this.token)" -foreground red
         # retrieve from token only id number
         $this.token = $this.token.substring(11, $this.token.Length - 13);
+		Write-Host "final token: $($this.token)" -foreground red
+		Write-Host "user: $($this.user)" -foreground red
+		Write-Host "server $($this.server)" -foreground red
     }
 
     # check whether $app is installed
@@ -104,9 +107,9 @@ class Uploader {
         $this.uploadLink = $( & $($this.curl) -H "Authorization: Token $($this.token)" "$($this.server)/api2/repos/$($this.repo)/$($this.operation)/" );
         
         # remove quotes
-		Write-Host "($this.uploadLink)"
+		Write-Host "$($this.uploadLink)"
         $this.uploadLink = $this.uploadLink.Replace('"',"");
-		Write-Host "($this.uploadLink)"
+		Write-Host "$($this.uploadLink)"
     }
 
     [void] run() {
@@ -119,7 +122,7 @@ class Uploader {
             Write-Host "Uploading $($this.file)"
 			Write-Host "file=@$($this.file)"
 			Write-Host "parent_dir=/$($this.directory)"
-			Write-Host "$($this.uploadLink)"
+			Write-Host "$($this.uploadLink)" -foreground red
             & $($this.curl) -H "Authorization: Token $($this.token)" -F file=@$($this.file) -F filename=$($this.filename) -F "parent_dir=/$($this.directory)" "$($this.uploadLink)"
         }
     }
