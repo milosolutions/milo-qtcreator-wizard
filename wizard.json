@@ -181,7 +181,8 @@
             "data":
             [
                 {
-                    "source": "doc/branding"
+                    "source": "doc/branding",
+					"isBinary": true
                 },
                 {
                     "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/AUTHORS.md",
@@ -196,11 +197,13 @@
                 {
                     "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/doc",
                     "target": "milo/mbarcodescanner/doc",
+					"isBinary": true,
                     "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/example",
                     "target": "milo/mbarcodescanner/example",
+					"isBinary": true,
                     "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
                 },
                 {
@@ -246,6 +249,7 @@
                 {
                     "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/patches",
                     "target": "milo/mbarcodescanner/patches",
+					"isBinary": true,
                     "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
                 },
                 {
@@ -256,6 +260,7 @@
                 {
                     "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/scripts",
                     "target": "milo/mbarcodescanner/scripts",
+					"isBinary": true,
                     "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
                 },
 				{
@@ -316,36 +321,41 @@
                 {
                     "source": "packages/com.milosolutions.mconfig/data/milo/mconfig",
                     "target": "milo/mconfig",
+					"isBinary": true,
                     "condition": "%{JS: '%{MConfigChB}' === 'MConfigChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcrypto/data/milo/mcrypto",
-                    "target": "milo/mcrypto",
-                    "condition": "%{JS: '%{MCryptoChB}' === 'MCryptoChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.mlog/data/milo/mlog",
                     "target": "milo/mlog",
+					"isBinary": true,
                     "condition": "%{JS: '%{MLogChB}' === 'MLogChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.mlog/data/milo/mlog/.git",
+                    "condition": false
                 },
                 {
                     "source": "packages/com.milosolutions.mrestapi/data/milo/mrestapi",
                     "target": "milo/mrestapi",
+					"isBinary": true,
                     "condition": "%{JS: '%{MRestAPIChB}' === 'MRestAPIChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.mcrypto/data/milo/mcrypto",
                     "target": "milo/mcrypto",
+					"isBinary": true,
                     "condition": "%{JS: '%{MCryptoChB}' === 'MCryptoChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.mscripts/data/milo/mscripts",
                     "target": "milo/mscripts",
+					"isBinary": true,
                     "condition": "%{JS: '%{MScriptsChB}' === 'MScriptsChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.msentry/data/milo/msentry",
                     "target": "milo/msentry",
+					"isBinary": true,
                     "condition": "%{JS: '%{MSentryChB}' === 'MSentryChBChecked'}"
                 },
 				{
@@ -361,6 +371,7 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/gitlab-ci.yml.example",
                     "target": ".gitlab-ci.yml",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
@@ -385,7 +396,7 @@
                 },
                 {
                     "source": "project.pro",
-                    "target": "%{ProFileName}",
+                    "target": "%{ProFile}",
                     "openAsProject": true
                 },
                 {
