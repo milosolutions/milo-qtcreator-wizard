@@ -185,137 +185,15 @@
 					"isBinary": true
                 },
                 {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/AUTHORS.md",
-                    "target": "milo/mbarcodescanner/AUTHORS.md",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/camera_tricks.md",
-                    "target": "milo/mbarcodescanner/camera_tricks.md",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/doc",
-                    "target": "milo/mbarcodescanner/doc",
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner",
+                    "target": "milo/mbarcodescanner",
 					"isBinary": true,
                     "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
                 },
                 {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/example",
-                    "target": "milo/mbarcodescanner/example",
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts",
+                    "target": "milo/mcharts",
 					"isBinary": true,
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/how_to_build.md",
-                    "target": "milo/mbarcodescanner/how_to_build.md",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/LICENSE-MiloCodeDB.txt",
-                    "target": "milo/mbarcodescanner/LICENSE-MiloCodeDB.txt",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MBarcodeCaptureFilter.cpp",
-                    "target": "milo/mbarcodescanner/MBarcodeCaptureFilter.cpp",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MBarcodeCaptureFilter.h",
-                    "target": "milo/mbarcodescanner/MBarcodeCaptureFilter.h",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/mbarcodescanner.doxyfile",
-                    "target": "milo/mbarcodescanner/mbarcodescanner.doxyfile",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/mbarcodescanner.pri",
-                    "target": "milo/mbarcodescanner/mbarcodescanner.pri",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MImageConverters.cpp",
-                    "target": "milo/mbarcodescanner/MImageConverters.cpp",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MImageConverters.h",
-                    "target": "milo/mbarcodescanner/MImageConverters.h",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/patches",
-                    "target": "milo/mbarcodescanner/patches",
-					"isBinary": true,
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/README.md",
-                    "target": "milo/mbarcodescanner/README.md",
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/scripts",
-                    "target": "milo/mbarcodescanner/scripts",
-					"isBinary": true,
-                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
-                },
-				{
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/AUTHORS.md",
-                    "target": "milo/mcharts/AUTHORS.md",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/Chart.js",
-                    "target": "milo/mcharts/Chart.js",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/Chart.qml",
-                    "target": "milo/mcharts/Chart.qml",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/doc",
-                    "target": "milo/mcharts/doc",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/example",
-                    "target": "milo/mcharts/example",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/LICENSE-MiloCodeDB.txt",
-                    "target": "milo/mcharts/LICENSE-MiloCodeDB.txt",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/MChart.qml",
-                    "target": "milo/mcharts/MChart.qml",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.doxyfile",
-                    "target": "milo/mcharts/mcharts.doxyfile",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.pri",
-                    "target": "milo/mcharts/mcharts.pri",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.qrc",
-                    "target": "milo/mcharts/mcharts.qrc",
-                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/README.md",
-                    "target": "milo/mcharts/README.md",
                     "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
                 },
                 {
@@ -445,8 +323,38 @@
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
-                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests",
-                    "target": "tests",
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project",
+                    "target": "tests/tst_project",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/helpers",
+                    "target": "tests/helpers",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/Readme-tests.md",
+                    "target": "tests/Readme-tests.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/testConfig.pri",
+                    "target": "tests/testConfig.pri",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tests.pro",
+                    "target": "tests/tests.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project/tst_project.pro",
+                    "target": "tests/tst_project/tst_project.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project/tst_template.cpp",
+                    "target": "tests/tst_project/tst_%{ProjectName}.cpp",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 }
             ]
