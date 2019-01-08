@@ -1,0 +1,444 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ "CMakeProjectManager.CMakeProject", "Qbs.QbsProject", "Qt4ProjectManager.Qt4Project" ],
+    "id": "E.MiloWizard",
+    "category": "F.MiloApplication",
+    "trDescription": "Creates a project containing a single main.cpp file with a stub implementation.\n\nPreselects a desktop Qt for building the application if available.",
+    "trDisplayName": "Milo Wizard",
+    "trDisplayCategory": "MILO Application",
+    "icon": "../../global/consoleapplication.png",
+    "featuresRequired": [ "QtSupport.Wizards.FeatureQt" ],
+    "enabled": "%{JS: [ %{Plugins} ].indexOf('QmakeProjectManager') >= 0 || [ %{Plugins} ].indexOf('QbsProjectManager') >= 0 || [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}",
+
+    "options":
+    [
+        { "key": "ProjectFile", "value": "%{JS: '%{BuildSystem}' === 'qmake' ? '%{ProFile}' : ('%{BuildSystem}' === 'cmake' ? '%{CMakeFile}' : '%{QbsFile}')}" },
+        { "key": "ProFile", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'pro')}" },
+        { "key": "QbsFile", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'qbs')}" },
+        { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+        { "key": "CppFileName", "value": "%{JS: 'main.' + Util.preferredSuffix('text/x-c++src')}" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project",
+            "data": { "trDescription": "This wizard creates a simple Qt-based console application." }
+        },
+        {
+            "trDisplayName": "Kit Selection",
+            "trShortTitle": "Kits",
+            "typeId": "Kits",
+            "enabled": "%{JS: ! %{IsSubproject}}",
+            "data": { "projectFilePath": "%{ProjectFile}" }
+        },
+        {
+            "trDisplayName": "Select Required Project Templates",
+            "trShortTitle": "Project Templates",
+            "typeId": "Fields",
+            "data": [
+                {
+                    "name": "NewProjectTemplateChB",
+                    "trDisplayName": "New Project Template",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "NewProjectTemplateChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "PlatformSupportLbl",
+                    "type": "Label",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "wordWrap": true,
+                        "trText": "Platform support:"
+                    }
+                },
+                {
+                    "name": "AndroidChB",
+                    "trDisplayName": "Android",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "AndroidChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MacChB",
+                    "trDisplayName": "Mac",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "MacChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "WindowsChB",
+                    "trDisplayName": "Windows",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "WindowsChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "Spcr1",
+                    "type": "Spacer",
+                    "data": {
+                        "factor": 3
+                    }
+                },
+                {
+                    "name": "MConfigChB",
+                    "trDisplayName": "Include MConfig",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MConfigChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MChartsChB",
+                    "trDisplayName": "Include MCharts",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MChartsChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MLogChB",
+                    "trDisplayName": "Include MLog",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MLogChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MRestAPIChB",
+                    "trDisplayName": "Include MRestAPI",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MRestAPIChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MSentryChB",
+                    "trDisplayName": "Include MSentry",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MSentryChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MCryptoChB",
+                    "trDisplayName": "Include MCrypto",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MCryptoChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MBarcodeScannerChB",
+                    "trDisplayName": "Include MBarcodeScanner",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MBarcodeScannerChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MScriptsChB",
+                    "trDisplayName": "Include MScripts",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "MScriptsChBChecked",
+                        "uncheckedValue": ""
+                    }
+                }
+            ]
+        },
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                {
+                    "source": "doc/branding"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/AUTHORS.md",
+                    "target": "milo/mbarcodescanner/AUTHORS.md",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/camera_tricks.md",
+                    "target": "milo/mbarcodescanner/camera_tricks.md",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/doc",
+                    "target": "milo/mbarcodescanner/doc",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/example",
+                    "target": "milo/mbarcodescanner/example",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/how_to_build.md",
+                    "target": "milo/mbarcodescanner/how_to_build.md",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/LICENSE-MiloCodeDB.txt",
+                    "target": "milo/mbarcodescanner/LICENSE-MiloCodeDB.txt",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MBarcodeCaptureFilter.cpp",
+                    "target": "milo/mbarcodescanner/MBarcodeCaptureFilter.cpp",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MBarcodeCaptureFilter.h",
+                    "target": "milo/mbarcodescanner/MBarcodeCaptureFilter.h",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/mbarcodescanner.doxyfile",
+                    "target": "milo/mbarcodescanner/mbarcodescanner.doxyfile",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/mbarcodescanner.pri",
+                    "target": "milo/mbarcodescanner/mbarcodescanner.pri",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MImageConverters.cpp",
+                    "target": "milo/mbarcodescanner/MImageConverters.cpp",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/MImageConverters.h",
+                    "target": "milo/mbarcodescanner/MImageConverters.h",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/patches",
+                    "target": "milo/mbarcodescanner/patches",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/README.md",
+                    "target": "milo/mbarcodescanner/README.md",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mbarcodescanner/data/milo/mbarcodescanner/scripts",
+                    "target": "milo/mbarcodescanner/scripts",
+                    "condition": "%{JS: '%{MBarcodeScannerChB}' === 'MBarcodeScannerChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/AUTHORS.md",
+                    "target": "milo/mcharts/AUTHORS.md",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/Chart.js",
+                    "target": "milo/mcharts/Chart.js",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/Chart.qml",
+                    "target": "milo/mcharts/Chart.qml",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/doc",
+                    "target": "milo/mcharts/doc",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/example",
+                    "target": "milo/mcharts/example",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/LICENSE-MiloCodeDB.txt",
+                    "target": "milo/mcharts/LICENSE-MiloCodeDB.txt",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/MChart.qml",
+                    "target": "milo/mcharts/MChart.qml",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.doxyfile",
+                    "target": "milo/mcharts/mcharts.doxyfile",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.pri",
+                    "target": "milo/mcharts/mcharts.pri",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/mcharts.qrc",
+                    "target": "milo/mcharts/mcharts.qrc",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcharts/data/milo/mcharts/README.md",
+                    "target": "milo/mcharts/README.md",
+                    "condition": "%{JS: '%{MChartsChB}' === 'MChartsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mconfig/data/milo/mconfig",
+                    "target": "milo/mconfig",
+                    "condition": "%{JS: '%{MConfigChB}' === 'MConfigChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcrypto/data/milo/mcrypto",
+                    "target": "milo/mcrypto",
+                    "condition": "%{JS: '%{MCryptoChB}' === 'MCryptoChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mlog/data/milo/mlog",
+                    "target": "milo/mlog",
+                    "condition": "%{JS: '%{MLogChB}' === 'MLogChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mrestapi/data/milo/mrestapi",
+                    "target": "milo/mrestapi",
+                    "condition": "%{JS: '%{MRestAPIChB}' === 'MRestAPIChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mcrypto/data/milo/mcrypto",
+                    "target": "milo/mcrypto",
+                    "condition": "%{JS: '%{MCryptoChB}' === 'MCryptoChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.mscripts/data/milo/mscripts",
+                    "target": "milo/mscripts",
+                    "condition": "%{JS: '%{MScriptsChB}' === 'MScriptsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.msentry/data/milo/msentry",
+                    "target": "milo/msentry",
+                    "condition": "%{JS: '%{MSentryChB}' === 'MSentryChBChecked'}"
+                },
+				{
+                    "source": "README.md",
+                    "target": "README.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/gitignore.example",
+                    "target": ".gitignore",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/gitlab-ci.yml.example",
+                    "target": ".gitlab-ci.yml",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/AUTHORS.md",
+                    "target": "AUTHORS.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/LICENSE-MiloCodeDB.txt",
+                    "target": "LICENSE-MiloCodeDB.txt",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/license-Qt.txt",
+                    "target": "license-Qt.txt",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/newprojecttemplate.doxyfile",
+                    "target": "%{ProjectName}.doxyfile",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "project.pro",
+                    "target": "%{ProFileName}",
+                    "openAsProject": true
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/android/android.pri",
+                    "target": "%{ProjectName}/platforms/android/android.pri",
+                    "condition": "%{JS: '%{AndroidChB}' === 'AndroidChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/mac/mac.pri",
+                    "target": "%{ProjectName}/platforms/mac/mac.pri",
+                    "condition": "%{JS: '%{MacChB}' === 'MacChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/windows/windows.pri",
+                    "target": "%{ProjectName}/platforms/windows/windows.pri",
+                    "condition": "%{JS: '%{WindowsChB}' === 'WindowsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/template.pro",
+                    "target": "%{ProjectName}/%{ProjectName}.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/qml",
+                    "target": "%{ProjectName}/qml",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/resources",
+                    "target": "%{ProjectName}/resources",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/src",
+                    "target": "%{ProjectName}/src",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/README.md",
+                    "target": "README.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/Release.md",
+                    "target": "Release.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests",
+                    "target": "tests",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                }
+            ]
+        }
+    ]
+}
