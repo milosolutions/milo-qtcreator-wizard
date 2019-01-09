@@ -255,16 +255,37 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/AUTHORS.md",
                     "target": "AUTHORS.md",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/version.pri",
+                    "target": "version.pri",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/.clang-format",
+                    "target": ".clang-format",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/.git",
+                    "target": ".git",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/LICENSE-MiloCodeDB.txt",
                     "target": "LICENSE-MiloCodeDB.txt",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/license-Qt.txt",
                     "target": "license-Qt.txt",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
@@ -280,16 +301,19 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/android/android.pri",
                     "target": "%{ProjectName}/platforms/android/android.pri",
+					"isBinary": true,
                     "condition": "%{JS: '%{AndroidChB}' === 'AndroidChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/mac/mac.pri",
                     "target": "%{ProjectName}/platforms/mac/mac.pri",
+					"isBinary": true,
                     "condition": "%{JS: '%{MacChB}' === 'MacChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/windows/windows.pri",
                     "target": "%{ProjectName}/platforms/windows/windows.pri",
+					"isBinary": true,
                     "condition": "%{JS: '%{WindowsChB}' === 'WindowsChBChecked'}"
                 },
                 {
