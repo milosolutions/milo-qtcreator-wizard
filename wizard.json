@@ -339,6 +339,7 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/README.md",
                     "target": "README.md",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
@@ -349,11 +350,13 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project",
                     "target": "tests/tst_project",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/tests/helpers",
                     "target": "tests/helpers",
+					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
