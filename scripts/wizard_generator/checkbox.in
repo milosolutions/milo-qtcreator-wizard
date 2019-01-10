@@ -1,0 +1,9 @@
+                {
+                    "name": "%moduleName%CheckBox",
+                    "trDisplayName": "Include %moduleName%",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "%moduleName%ChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
