@@ -1,0 +1,11 @@
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/Release.md",
+                    "target": "Release.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                }
