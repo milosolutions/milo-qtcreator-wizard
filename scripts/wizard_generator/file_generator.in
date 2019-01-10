@@ -1,0 +1,6 @@
+				{
+                    "source": "%SOURCE%",
+                    "target": "%TARGET%",
+					"isBinary": true,
+                    "condition": "%{JS: '%MODULENAME%CheckBox}' === '%MODULENAME%ChBChecked'}"
+                }
