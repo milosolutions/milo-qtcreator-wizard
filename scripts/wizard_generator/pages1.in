@@ -7,15 +7,69 @@
             "data": { "trDescription": "This wizard creates a simple Qt-based console application." }
         },
         {
-            "trDisplayName": "Kit Selection",
-            "trShortTitle": "Kits",
-            "typeId": "Kits",
-            "enabled": "%{JS: ! %{IsSubproject}}",
-            "data": { "projectFilePath": "%{ProjectFile}" }
-        },
-        {
-            "trDisplayName": "Select Required Project Templates",
-            "trShortTitle": "Project Templates",
+            "trDisplayName": "Select required:",
+            "trShortTitle": "Modules",
             "typeId": "Fields",
             "data": [
+                {
+                    "name": "PlatformInfoLabel",
+                    "type": "Label",
+                    "data": {
+                        "trText": "Templated modules:"
+                    }
+                },
+                {
+                    "name": "NewProjectTemplateChB",
+                    "trDisplayName": "New Project Template",
+                    "type": "CheckBox",
+                    "data": {
+                        "checkedValue": "NewProjectTemplateChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "PlatformLabel",
+                    "type": "Label",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "trText": "Platform:"
+                    }
+                },
+                {
+                    "name": "AndroidChB",
+                    "trDisplayName": "Android",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "AndroidChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "MacChB",
+                    "trDisplayName": "Mac",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "MacChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "WindowsChB",
+                    "trDisplayName": "Windows",
+                    "type": "CheckBox",
+                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "data": {
+                        "checkedValue": "WindowsChBChecked",
+                        "uncheckedValue": ""
+                    }
+                },
+                {
+                    "name": "ModulesInfoLabel",
+                    "type": "Label",
+                    "data": {
+                        "trText": "Normal modules:"
+                    }
+                }
                 

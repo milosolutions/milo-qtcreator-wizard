@@ -5,7 +5,154 @@
             "data":
             [
                 {
+                    "source": "doc/branding",
+					"isBinary": true
+                },
+				{
+                    "source": "README.md",
+                    "target": "README.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/gitignore.example",
+                    "target": ".gitignore",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/gitlab-ci.yml.example",
+                    "target": ".gitlab-ci.yml",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/AUTHORS.md",
+                    "target": "AUTHORS.md",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/version.pri",
+                    "target": "version.pri",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/.clang-format",
+                    "target": ".clang-format",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+				{
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/.git",
+                    "target": ".git",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/LICENSE-MiloCodeDB.txt",
+                    "target": "LICENSE-MiloCodeDB.txt",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/license-Qt.txt",
+                    "target": "license-Qt.txt",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/newprojecttemplate.doxyfile",
+                    "target": "%{ProjectName}.doxyfile",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "project.pro",
+                    "target": "%{ProFile}",
+                    "openAsProject": true
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/android/android.pri",
+                    "target": "%{ProjectName}/platforms/android/android.pri",
+					"isBinary": true,
+                    "condition": "%{JS: '%{AndroidChB}' === 'AndroidChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/mac/mac.pri",
+                    "target": "%{ProjectName}/platforms/mac/mac.pri",
+					"isBinary": true,
+                    "condition": "%{JS: '%{MacChB}' === 'MacChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/windows/windows.pri",
+                    "target": "%{ProjectName}/platforms/windows/windows.pri",
+					"isBinary": true,
+                    "condition": "%{JS: '%{WindowsChB}' === 'WindowsChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/template.pro",
+                    "target": "%{ProjectName}/%{ProjectName}.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/qml",
+                    "target": "%{ProjectName}/qml",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/resources",
+                    "target": "%{ProjectName}/resources",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template/src",
+                    "target": "%{ProjectName}/src",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/README.md",
+                    "target": "README.md",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/Release.md",
                     "target": "Release.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project",
+                    "target": "tests/tst_project",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/helpers",
+                    "target": "tests/helpers",
+					"isBinary": true,
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/Readme-tests.md",
+                    "target": "tests/Readme-tests.md",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/testConfig.pri",
+                    "target": "tests/testConfig.pri",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tests.pro",
+                    "target": "tests/tests.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project/tst_project.pro",
+                    "target": "tests/tst_project/tst_project.pro",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project/tst_template.cpp",
+                    "target": "tests/tst_project/tst_%{ProjectName}.cpp",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 }
