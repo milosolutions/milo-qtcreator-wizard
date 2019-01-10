@@ -17,23 +17,20 @@ MODULES=(\
 
 
 
-cat header.in        > wizard.json
-cat options.in      >> wizard.json
-cat pages1.in       >> wizard.json
+cat header.in 
+cat options.in     
 
-echo {} >> wizard.json
+cat pages1.in      
 for MODULE in ${MODULES[*]}
 do
     filename=$(basename -- "$MODULE")
     moduleName="${filename##*.}"
-    echo , >> wizard.json
-    sed -e "s;%moduleName%;$moduleName;g" checkbox.in >> wizard.json
+    echo ,
+    sed -e "s;%moduleName%;$moduleName;g" checkbox.in
 done
+cat pages2.in      
 
-cat pages2.in       >> wizard.json
-
-echo     \"generators\": [ {} >> wizard.json
-
+cat generators1.in
 for MODULE in ${MODULES[*]}
 do
     filename=$(basename -- "$MODULE")
@@ -44,14 +41,12 @@ do
     do
         prefix="$MODULE"data/milo/
         target=${modfile#"$prefix"}
-        echo , >> wizard.json
+        echo ,
         sed \
             -e "s;%MODULENAME%;$moduleName;g" \
             -e "s;%SOURCE%;$modfile;g"\
             -e "s;%TARGET%;$target;g"\
-            file_generator.in >> wizard.json
+            file_generator.in
     done
 done
-
-echo ] >> wizard.json
-echo } >> wizard.json
+cat generators2.in
