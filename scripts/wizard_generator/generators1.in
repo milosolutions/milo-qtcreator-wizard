@@ -5,7 +5,8 @@
             "data":
             [
                 {
-                    "source": "doc/branding",
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/doc/branding",
+                    "target": "doc/branding",
 					"isBinary": true
                 },
 				{
@@ -33,13 +34,6 @@
 				{
                     "source": "packages/com.milosolutions.newprojecttemplate/data/version.pri",
                     "target": "version.pri",
-					"isBinary": true,
-                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
-                },
-				{
-                    "source": "packages/com.milosolutions.newprojecttemplate/data/.clang-format",
-                    "target": ".clang-format",
-					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
 				{
@@ -66,8 +60,9 @@
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
-                    "source": "project.pro",
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/template.pro",
                     "target": "%{ProFile}",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
                     "openAsProject": true
                 },
                 {
@@ -79,7 +74,6 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/template/platforms/mac/mac.pri",
                     "target": "%{ProjectName}/platforms/mac/mac.pri",
-					"isBinary": true,
                     "condition": "%{JS: '%{MacChB}' === 'MacChBChecked'}"
                 },
                 {
@@ -117,12 +111,6 @@
                 {
                     "source": "packages/com.milosolutions.newprojecttemplate/data/Release.md",
                     "target": "Release.md",
-                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
-                },
-                {
-                    "source": "packages/com.milosolutions.newprojecttemplate/data/tests/tst_project",
-                    "target": "tests/tst_project",
-					"isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
