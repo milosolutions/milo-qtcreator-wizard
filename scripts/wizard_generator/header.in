@@ -3,7 +3,7 @@
     "supportedProjectTypes": [ "CMakeProjectManager.CMakeProject", "Qbs.QbsProject", "Qt4ProjectManager.Qt4Project" ],
     "id": "E.MiloWizard",
     "category": "F.MiloApplication",
-    "trDescription": "Creates a project containing a single main.cpp file with a stub implementation.\n\nPreselects a desktop Qt for building the application if available.",
+    "trDescription": "Creates a MILO project containing selected modules.",
     "trDisplayName": "Milo Wizard",
     "trDisplayCategory": "MILO Application",
     "icon": "./icon.png",
