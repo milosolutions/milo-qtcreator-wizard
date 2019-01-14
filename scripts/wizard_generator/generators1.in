@@ -10,7 +10,7 @@
 					"isBinary": true
                 },
 				{
-                    "source": "README.md",
+                    "source": "packages/com.milosolutions.newprojecttemplate/data/README.md",
                     "target": "README.md",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
