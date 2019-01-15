@@ -29,13 +29,17 @@ fi
 #   echo "Doxygen has not been found. No worries, this script will still continue "$DOXY
 # fi
 
+# temporary directory is used to store installer structe
 TEMP_DIR=$(mktemp -d)
 CONTENT_DIR=$TEMP_DIR/packages/com.milosolutions
+# copying config 
 cp -r scripts/wizard_generator/config $TEMP_DIR/config
-
+# creating directory for all the wizard data
 mkdir -p $CONTENT_DIR
 cp -r packages $CONTENT_DIR/data
+# meta files (pacage.xml and so on)
 cp -r scripts/wizard_generator/meta $CONTENT_DIR/meta/
+# generating wizard.json
 ./generator.sh > $CONTENT_DIR/data/wizard.json
 cp ./icon.png $CONTENT_DIR/data/icon.png
 
@@ -45,6 +49,7 @@ $IFW -v -c $TEMP_DIR/config/config.xml -p $TEMP_DIR/packages build/$OUTPUT
 
 chmod +x ./build/$OUTPUT
 
+# temporary dir is no longer necessary
 rm -r $TEMP_DIR
 
 echo "Done! Installer was created here: build/$OUTPUT"
