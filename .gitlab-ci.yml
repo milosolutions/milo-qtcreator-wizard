@@ -43,6 +43,14 @@ build_linux_installer:
   tags:
     - LinuxDesktop
 
+build_linux_wizard_installer:
+  variables:
+    MILO_SERVER: "https://seafile.milosolutions.com"
+  script:
+    - scripts/wizard_generator/build_and_upload.sh
+  tags:
+    - LinuxDesktop
+
 build_windows_installer:
   script:
     - powershell -ExecutionPolicy RemoteSigned -File scripts/deploy.ps1
