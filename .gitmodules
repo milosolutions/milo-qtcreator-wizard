@@ -25,3 +25,6 @@
 [submodule "packages/com.milosolutions.mcrypto/data/milo/mcrypto"]
 	path = packages/com.milosolutions.mcrypto/data/milo/mcrypto
 	url = https://github.com/milosolutions/mcrypto.git
+[submodule "packages/com.milosolutions.mwizardtemplate/data/milo/mwizardtemplate"]
+	path = packages/com.milosolutions.mwizardtemplate/data/milo/mwizardtemplate
+	url = https://git.milosolutions.com/milo-code-database/mtemplatewizard.git
