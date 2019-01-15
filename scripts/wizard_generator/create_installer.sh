@@ -16,7 +16,7 @@ if [ $# -lt 2 ]; then
   exit 1
 fi
 
-EXTENSION=$1
+OUTPUT_INSTALLER_FILE=$1
 IFW=$2
 DOXY=$3
 
@@ -40,16 +40,15 @@ cp -r packages $CONTENT_DIR/data
 # meta files (pacage.xml and so on)
 cp -r scripts/wizard_generator/meta $CONTENT_DIR/meta/
 # generating wizard.json
-./generator.sh > $CONTENT_DIR/data/wizard.json
+./scripts/wizard_generator/generator.sh > $CONTENT_DIR/data/wizard.json
 cp ./icon.png $CONTENT_DIR/data/icon.png
 
-OUTPUT=miloWizardinstaller_$(date +%Y.%m.%d).$EXTENSION
-echo "Building installer"
-$IFW -v -c $TEMP_DIR/config/config.xml -p $TEMP_DIR/packages build/$OUTPUT
 
-chmod +x ./build/$OUTPUT
+echo "Building installer"
+$IFW -v -c $TEMP_DIR/config/config.xml -p $TEMP_DIR/packages $OUTPUT_INSTALLER_FILE
+chmod +x $OUTPUT_INSTALLER_FILE
 
 # temporary dir is no longer necessary
 rm -r $TEMP_DIR
 
-echo "Done! Installer was created here: build/$OUTPUT"
+echo "Done! Installer was created here: $OUTPUT_INSTALLER_FILE"
