@@ -16,6 +16,18 @@ MODULES=(\
 ./packages/com.milosolutions.msentry/ \
 )
 
+# Takes path to module directory and returns its full name
+# (e.g. com.milosolutions.mbarcodescanner)
+getFullModuleName() {
+  echo $(basename -- "$1")
+}
+
+# gets module name (e.g. msentry) from full name
+getModuleName() {
+    fullname=$(getFullModuleName $1)
+    echo "${fullname##*.}"
+}
+
 # prints header which contains wizard meta-info and also project description, icon and so on..
 cat ./scripts/wizard_generator/header.in 
 # options contains calculated string used for substitutions (like ProjectName)
@@ -26,10 +38,7 @@ cat ./scripts/wizard_generator/pages1.in
 # create CheckBoxes for 'Choose modules' Page
 for MODULE in ${MODULES[*]}
 do
-    # gets fullname (e.g ./packages/com.milosolutions.msentry) from path
-    fullname=$(basename -- "$MODULE")
-    # gets module name (e.g. msentry) from full name
-    moduleName="${fullname##*.}"
+    moduleName=$(getModuleName $MODULE)
     echo ,
     # generate CheckBox entry from template, substituting module name
     sed -e "s;%moduleName%;$moduleName;g" ./scripts/wizard_generator/checkbox.in
@@ -41,9 +50,7 @@ cat ./scripts/wizard_generator/pages2.in
 cat ./scripts/wizard_generator/generators1.in
 for MODULE in ${MODULES[*]}
 do
-    fullname=$(basename -- "$MODULE")
-    moduleName="${fullname##*.}"
-
+    moduleName=$(getModuleName $MODULE)
     # gets all files from module, except:
     # - files related with git (.git, .gitingore, ...)
     # - files inside meta directory
