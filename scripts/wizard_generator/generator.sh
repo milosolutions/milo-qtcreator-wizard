@@ -16,6 +16,9 @@ packages/com.milosolutions.mscripts/ \
 packages/com.milosolutions.msentry/ \
 )
 
+# modules that should be checked as default in wizard
+DEFAULT=(mlog mconfig mscripts)
+
 # Takes path to module directory and returns its full name
 # (e.g. com.milosolutions.mbarcodescanner)
 getFullModuleName() {
@@ -26,6 +29,18 @@ getFullModuleName() {
 getModuleName() {
     fullname=$(getFullModuleName $1)
     echo "${fullname##*.}"
+}
+
+isDefault() {
+    for item in ${DEFAULT[*]}
+    do
+        if [ "$item" == "$1" ]
+        then
+            echo true
+            return
+        fi
+    done
+    echo false
 }
 
 # prints header which contains wizard meta-info and also project description, icon and so on..
@@ -41,7 +56,11 @@ do
     moduleName=$(getModuleName $MODULE)
     echo ,
     # generate CheckBox entry from template, substituting module name
-    sed -e "s;%moduleName%;$moduleName;g" ./scripts/wizard_generator/checkbox.in
+    checked=$(isDefault $moduleName)
+    sed \
+        -e "s;%moduleName%;$moduleName;g" \
+        -e "s;%checked%;$checked;g"\
+        ./scripts/wizard_generator/checkbox.in
 done
 # finishing pages section
 cat ./scripts/wizard_generator/pages2.in      
