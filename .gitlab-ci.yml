@@ -22,7 +22,7 @@ stages:
 
 generate_wizard:
   stage: wizard
-  script: scripts/wizard_generator/ > wizard.json
+  script: scripts/wizard_generator/generator.sh > wizard.json
   tags:
   - LinuxDesktop
   artifacts:
