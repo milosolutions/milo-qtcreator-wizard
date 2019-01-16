@@ -39,8 +39,9 @@ mkdir -p $CONTENT_DIR/data
 cp -r packages $CONTENT_DIR/data/packages
 # meta files (pacage.xml and so on)
 cp -r scripts/wizard_generator/meta $CONTENT_DIR/meta/
-# generating wizard.json
-./scripts/wizard_generator/generator.sh > $CONTENT_DIR/data/wizard.json
+## generating wizard.json
+#./scripts/wizard_generator/generator.sh > $CONTENT_DIR/data/wizard.json
+cp wizard.json $CONTENT_DIR/data/wizard.json
 cp ./icon.png $CONTENT_DIR/data/icon.png
 
 
