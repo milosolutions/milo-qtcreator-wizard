@@ -23,10 +23,13 @@ stages:
 generate_wizard:
   stage: wizard
   script: scripts/wizard_generator/ > wizard.json
+  tags:
+  - LinuxDesktop
   artifacts:
     paths:
     - wizard.json
     #expire_in: 20 minutes
+
 
 build_linux_wizard_installer:
   stage: installers
