@@ -25,12 +25,6 @@
                     "target": "version.pri",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
-				{
-                    "source": "packages/com.milosolutions.mwizardtemplate/data/milo/mwizardtemplate/.git",
-                    "target": ".git",
-					"isBinary": true,
-                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
-                },
                 {
                     "source": "packages/com.milosolutions.mwizardtemplate/data/milo/mwizardtemplate/LICENSE-MiloCodeDB.txt",
                     "target": "LICENSE-MiloCodeDB.txt",
