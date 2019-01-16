@@ -35,8 +35,8 @@ CONTENT_DIR=$TEMP_DIR/packages/com.milosolutions
 # copying config 
 cp -r scripts/wizard_generator/config $TEMP_DIR/config
 # creating directory for all the wizard data
-mkdir -p $CONTENT_DIR
-cp -r packages $CONTENT_DIR/data
+mkdir -p $CONTENT_DIR/data
+cp -r packages $CONTENT_DIR/data/packages
 # meta files (pacage.xml and so on)
 cp -r scripts/wizard_generator/meta $CONTENT_DIR/meta/
 # generating wizard.json
