@@ -8,6 +8,10 @@
         <License name="Default Milo license" file="license.txt" />
     </Licenses>
     <Default>true</Default>
-    <SortingPriority>99</SortingPriority>
+    <Required>true</Required>
+    <Script>installscript.qs</Script>
+    <UserInterfaces>
+        <UserInterface>targetwidget.ui</UserInterface>
+    </UserInterfaces>
     <!--Script>installscript.qs</Script-->
 </Package>

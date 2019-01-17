@@ -43,7 +43,9 @@ cp -r scripts/wizard_generator/meta $CONTENT_DIR/meta/
 #./scripts/wizard_generator/generator.sh > $CONTENT_DIR/data/wizard.json
 cp wizard.json $CONTENT_DIR/data/wizard.json
 cp ./icon.png $CONTENT_DIR/data/icon.png
-
+# reinstall method described here: 
+# https://stackoverflow.com/questions/46455360/workaround-for-qt-installer-framework-not-overwriting-existing-installation/46614107#46614107
+cp scripts/wizard_generator/auto_uninstall.qs $CONTENT_DIR/data/auto_uninstall.qs
 
 echo "Building installer"
 $IFW -v -c $TEMP_DIR/config/config.xml -p $TEMP_DIR/packages $OUTPUT_INSTALLER_FILE
