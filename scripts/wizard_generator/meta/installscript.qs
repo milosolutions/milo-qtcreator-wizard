@@ -6,9 +6,6 @@ function Component()
     component.loaded.connect(this, this.installerLoaded);
 }
 
-Component.prototype.createOperations = function() 
-{
-}
 
 Component.prototype.installerLoaded = function()
 {
