@@ -1,5 +1,5 @@
 @echo OFF
-
+echo "Installer generator"
 if "%1" == "-h" (
   echo Usage: create_win_installer.bat output_installer_name qtIfwPath [doxygenPath]
   echo This will only work when invoked from root repo dir
