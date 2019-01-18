@@ -67,7 +67,7 @@ class DeployEngine {
         Write-Host "Preparing temporary folder"
         if (Test-Path -Path $this.temp_dir) {
             Write-Host "Cleaning"
-            Remove-Item -Recurse $this.temp_dir
+            Remove-Item -Force -Recurse -Path ($this.temp_dir + "\*")
         } 
         Write-Host "creating directory for all the wizard data"
         mkdir ($this.content_dir + "\data")
@@ -86,9 +86,8 @@ class DeployEngine {
         copy .\scripts\wizard_generator\auto_uninstall.qs ($this.content_dir + "\data\auto_uninstall.qs") 
 
         Write-Host "Building Installer..."        
-        & $this.qtifw -c config/config.xml -p packages $this.file
-
-        Remove-Item -Recurse $this.temp_dir
+        & $this.qtifw -v -c ($this.temp_dir + "\config\config.windows.xml") -p ($this.temp_dir + "\packages") $this.file
+        Remove-Item -Force -Recurse -Path ($this.temp_dir + "\*")
         Write-Host "Done. `n"
     }
 
