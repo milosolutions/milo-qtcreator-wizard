@@ -27,11 +27,13 @@ class ScriptArgs {
 class DeployEngine {
     [string] $qtifw = "C:\Tools\Qt-OpenSource\Tools\QtInstallerFramework\3.0\bin\binarycreator.exe";
     [string] $file = "miloinstaller_"  + (Get-Date).ToString('yyyy.MM.dd') + ".exe";
-    [string] $creatorScript = "scripts\wizard_generator\create_win_installer.bat"
     [string] $server = "https://seafile.milosolutions.com";
     [string] $repo = $Env:MILOCODEDATABASE_SEAFILE_REPO;
     [string] $user = $Env:MILOVM_SEAFILE_USER;
     [string] $password = $Env:MILOVM_SEAFILE_PASSWORD;
+
+    [string] $temp_dir = '.\__tempMiloWizard';
+    [string] $content_dir = $this.temp_dir+"\packages\com.milosolutions";
 
     # constructor
     DeployEngine() {
@@ -62,8 +64,31 @@ class DeployEngine {
     }
 
     [void] buildInstaller() {
-        Write-Host "Building Installer..."
-        & $this.creatorScript $this.file $this.qtifw
+        Write-Host "Preparing temporary folder"
+        if (Test-Path -Path $this.temp_dir) {
+            Write-Host "Cleaning"
+            Remove-Item -Recurse $this.temp_dir
+        } 
+        Write-Host "creating directory for all the wizard data"
+        mkdir ($this.content_dir + "\data")
+
+        Write-Host "copying files ..."
+        # MIR - copy whole directory structure (mirror)
+        # rest of parameters makes it silent :P
+        robocopy /MIR /NFL /NDL /NJH /NJS /nc /ns /np .\scripts\wizard_generator\config ($this.temp_dir + "\config")
+        robocopy /MIR /NFL /NDL /NJH /NJS /nc /ns /np .\packages ($this.content_dir + "\data\packages")
+        robocopy /MIR /NFL /NDL /NJH /NJS /nc /ns /np .\scripts\wizard_generator\meta($this.content_dir + "\meta")
+        copy wizard.json ($this.content_dir + "\data\wizard.json") 
+        copy .\icon.png ($this.content_dir + "\data\icon.png") 
+        # rem copy reinstall script
+        # rem reinstall method described here: 
+        # rem https://stackoverflow.com/questions/46455360/workaround-for-qt-installer-framework-not-overwriting-existing-installation/46614107#46614107
+        copy .\scripts\wizard_generator\auto_uninstall.qs ($this.content_dir + "\data\auto_uninstall.qs") 
+
+        Write-Host "Building Installer..."        
+        & $this.qtifw -c config/config.xml -p packages $this.file
+
+        Remove-Item -Recurse $this.temp_dir
         Write-Host "Done. `n"
     }
 

@@ -45,7 +45,7 @@ build_windows_wizard_installer:
   variables:
     MILO_SERVER: "https://seafile.milosolutions.com"
   script:
-    - scripts/wizard_generator/build_and_upload_win.ps1
+    - powershell -ExecutionPolicy RemoteSigned -File scripts/wizard_generator/build_and_upload_win.ps1
   tags:
     - WindowsDesktop
 
