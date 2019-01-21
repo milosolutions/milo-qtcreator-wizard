@@ -6,14 +6,14 @@
 # In modules variable we store simple modules which will be delivered as they are (whitout template substitution)
 #MODULES=$(ls -d ../../packages/*/)
 MODULES=(\
-packages/com.milosolutions.mbarcodescanner/ \
-packages/com.milosolutions.mcharts/ \
-packages/com.milosolutions.mconfig/ \
-packages/com.milosolutions.mcrypto/ \
-packages/com.milosolutions.mlog/ \
-packages/com.milosolutions.mrestapi/ \
-packages/com.milosolutions.mscripts/ \
-packages/com.milosolutions.msentry/ \
+packages/mbarcodescanner/ \
+packages/mcharts/ \
+packages/mconfig/ \
+packages/mcrypto/ \
+packages/mlog/ \
+packages/mrestapi/ \
+packages/mscripts/ \
+packages/msentry/ \
 )
 
 # modules that should be checked as default in wizard
