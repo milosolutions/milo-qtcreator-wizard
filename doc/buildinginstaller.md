@@ -5,7 +5,7 @@ Building installer {#buildinginstaller}
 
 # CI builds # {#ci-build}
 
-Milo GitLab CI is set up to generate Milo Code DB
+Milo GitLab CI is set up to generate Milo Wizard installer,
 [online documentation](https://docs.milosolutions.com/milo-code-db/main/) and 
 the installers for Windows and Linux automatically for each new commit.
 
@@ -16,14 +16,16 @@ You can see the available installers [here](https://seafile.milosolutions.com/d/
 This repository can easily be compiled into an installer using:
 
 ```
-./scripts/build_unix.sh <QtIfwInstallationDir>/bin/binarycreator
+./scripts/wizard_generator/generator.sh > wizard.json
+./scripts/wizard_generator/create_installer.sh output_installer_file.run <QtIfwInstallationDir>/bin/binarycreator
 ```
 
 or (on Windows)
 
 ```
-scripts\build_windows.bat <QtIfwInstallationDir>\bin\binarycreator.exe
+scripts\wizard_generator\create_win_installer.bat output_installer_file.exe <QtIfwInstallationDir>\bin\binarycreator.exe
 ```
+There is no wizard generator for windows, so wizard.json should be provided and copied inside repository main directory.
 
 QtIFW is included in standard Qt installers from Qt Project (qt.io/downloads). Alternatively, you can compile QtIFW from source - but that is not necessary and will take you much more time.
 
@@ -34,6 +36,4 @@ On Linux, doxygen is usually available from your package manager, so do somethin
 sudo apt install doxygen
 ```
 
-Deploy script is also available (Linux) - it will build the project and upload the installer to Seafile, all in one go. Very convenient and recommended. 
 
-In the future, there is a plan to fully migrate to GitLabCI, making installer builds completely automatic. It is not possible in current version of GitLab.

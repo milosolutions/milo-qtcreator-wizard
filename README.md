@@ -4,7 +4,7 @@ Full documentation is available online - check it out [here](https://docs.miloso
 
 Source code: [GitHub](https://github.com/milosolutions)
 
-![Milo Code Database installer](doc/img/MCDBInstaller4.png "MCDB at work")
+![Milo Wizard](doc/img/wizard_selection.png "Milo wizard in QtCreator")
 
 # Intro
 
@@ -24,23 +24,23 @@ installers. See the following sections for more details.
 
 Subproject documentation is listed [here](\ref subprojects).
 
-# Prebuilt installers
+# QtCreator Wizard
 
-You can find prebuilt installers of Milo Code Database on our
+You can find prebuilt installers of Milo QtCreator Wizard on our
 [Seafile](https://seafile.milosolutions.com/d/2c50614e1e/).
 
-The installer is the quickest way to create a new project: with all
+The wizard is the quickest way to create a new project: with all
 necessary boilerplate code in place. The .pro file, doxygen, logger, build
-helpers, CI scripts, config classes... everything you choose to install
+helpers, CI scripts, config classes... everything you choose to include
 (the process is customizable) will be extracted to a single place - all
-that is left for you is to open it up in Qt Creator and start coding the
+that is left for you is start coding the
 interesting bits!
 
 # Using MCDB
 
 Milo Code DB can be used in 2 main ways:
 
-1. Use the MCDB installer to set up a new project. Add any modules you will need.
+1. Use the Milo QtCreator Wizard to set up a new project. Add any modules you will need.
 2. Use MCDB modules in an existing project: either by copying the code or adding
 them as git submodules.
 
@@ -48,49 +48,44 @@ Each MCDB submodule contains a readme file and doxygen documentation, so refer
 to them for more info. All docs are also available
 [online](https://docs.milosolutions.com/milo-code-db/main/subprojects.html).
 
-## Starting from installer
+## Starting from wizard
 
-If you are installing template project using Installer, go to
+If you want to install MILO QtCreator Wizard, go to
 [Seafile](https://seafile.milosolutions.com/d/2c50614e1e/) and download the
 newest installer for your platform.
 
-Run it (you may need to set the executable permission on Linux) and  choose the
-name for your project. This name will be used for folder name, your .pro file,
-target application name etc. so choose wisely.
+![Milo Installer](doc/img/installer_intro.png "Milo installer")
 
-<img src="MCDBInstaller2.png" alt="Choosing project name" style="width: 650px;"/>
-Choosing project name
+Run it (you may need to set the executable permission on Linux) and install it in default location.
+![Milo Installer](doc/img/installer_location.png "Milo installer location")
+If you have previous installation it will be updated.
 
+At this point now you should be able to setup new project inside QtCreator (restart necessary!).
+![Milo Wizard](doc/img/wizard_selection.png "Milo wizard in QtCreator")
 
-Next step is choosing the installation directory. Here setup will create a new
-folder with your (reviously chosen) project name, and copy all installation
-files into it.
+Creating new project involves several simple steps.
 
-If you select "Add git repository", the installer will run ```git init``` in
-the project directory after installation. You can also choose to create the
-initial commit with all the installed files. Lastly, you can specify remote
-repository (on GitLab or GitHub for example) and the installer will set it up
-for you as a *git remote* (origin). All git options are completely optional.
+Choosing project location
+![Milo Wizard](doc/img/wizard_project_location.png "Choosing project location")
 
-<img src="MCDBInstaller3.png" alt="Choosing installation directory" style="width: 650px;"/>
-Choosing installation directory
+Choosing build system (currenty only qmake is supported)
+![Milo Wizard](doc/img/wizard_build_system.png "Choosing build system")
 
+Choosing Kit
+![Milo Wizard](doc/img/wizard_kit.png "Choosing kit")
 
 On the following screen you get to choose the Milo Code Database modules you
 want to use in your project. All modules will be automatically added to your
 .pro file - after installation the project will be ready to be used, either
 with raw qmake or with Qt Creator.
+![Milo Wizard](doc/img/wizard_modules.png "Modules to choose")
 
-<img src="MCDBInstaller4.png" alt="Choosing MCDB modules" style="width: 650px;"/>
-Choosing MCDB modules
+If you select "Add to version control", the wizard will initialize repository for you.
+All version control options are  optional.
+![Milo Wizard](doc/img/wizard_summary.png "Wizard summary")
 
-
-Following are standard installation steps: license confirmation, installation
-progress and summary.
-
-When the installation is ready, you can open the .pro file (located in
-_installation dir_/_project name_/_project name_.pro) in Qt Creator and start
-coding. See the README.md located in your newly installed project for further
+When the wizard work is done, QtCreator will open the .pro file 
+You can start coding at this point!. See the README.md located in your newly installed project for further
 instructions.
 
 ## Using in existing project
@@ -109,10 +104,6 @@ required is to:
 Instructions for building MCDB installer are listed
 [here](\ref buildinginstaller).
 
-## Documentation branding
-
-Information how to apply Milo branding to doxygen docs is available in
-[Documentation branding](\ref docbranding).
 
 ## Requirements for new modules
 
