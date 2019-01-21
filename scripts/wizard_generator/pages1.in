@@ -26,16 +26,6 @@
                                 "trKey": "qmake",
                                 "value": "qmake",
                                 "condition": "%{JS: [ %{Plugins} ].indexOf('QmakeProjectManager') >= 0}"
-                            },
-                            {
-                                "trKey": "CMake",
-                                "value": "cmake",
-                                "condition": "%{JS: [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}"
-                            },
-                            {
-                                "trKey": "Qbs",
-                                "value": "qbs",
-                                "condition": "%{JS: [ %{Plugins} ].indexOf('QbsProjectManager') >= 0}"
                             }
                         ]
                     }
