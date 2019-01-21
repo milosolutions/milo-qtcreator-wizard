@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>MRestAPI</DisplayName>
+    <Description>MRestAPI contains base classes for communication via REST API.</Description>
+    <Version>1</Version>
+    <ReleaseDate>2017-08-16</ReleaseDate>
+    <Default>false</Default>
+    <Script>installscript.qs</Script>
+</Package>

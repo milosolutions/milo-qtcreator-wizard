@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>Milo wizard for QtCreator</DisplayName>
+    <Description>Wizard.</Description>
+    <Version>1</Version>
+    <ReleaseDate>2019-01-14</ReleaseDate>
+    <Licenses>
+        <License name="Default Milo license" file="license.txt" />
+    </Licenses>
+    <Default>true</Default>
+    <Required>true</Required>
+    <Script>installscript.qs</Script>
+    <UserInterfaces>
+        <UserInterface>targetwidget.ui</UserInterface>
+    </UserInterfaces>
+    <!--Script>installscript.qs</Script-->
+</Package>
