@@ -20,6 +20,7 @@ before_script:
 stages:
   - wizard
   - installers
+  - deploy
   - documentation
 
 
@@ -39,18 +40,48 @@ build_linux_wizard_installer:
   variables:
     MILO_SERVER: "https://seafile.milosolutions.com"
   script:
-    - scripts/wizard_generator/build_and_upload.sh
+    - rm ./installer.run
+    - ./scripts/wizard_generator/create_installer.sh ./installer.run /home/tools/Qt-OpenSource/Tools/QtInstallerFramework/3.0/bin/binarycreator
   tags:
     - LinuxDesktop
+  artifacts:
+    paths:
+    - installer.run
 
 build_windows_wizard_installer:
   stage: installers
   variables:
     MILO_SERVER: "https://seafile.milosolutions.com"
   script:
-    - powershell -ExecutionPolicy RemoteSigned -File scripts/wizard_generator/build_and_upload_win.ps1
+    - erase installer.exe
+    - scripts/wizard_generator/create_win_installer.bat installer.exe "C:\Tools\Qt-OpenSource\Tools\QtInstallerFramework\3.0\bin\binarycreator.exe"
   tags:
     - WindowsDesktop
+  artifacts:
+    paths:
+    - installer.exe
+
+deploy_linux_installer:
+  stage: deploy
+  variables:
+    DOMAIN: "https://seafile.milosolutions.com"
+  script:
+    - OUTPUT=./build/miloWizardInstaller_$(date +%Y.%m.%d).run
+    - mv ./installer.run $OUTPUT
+    - ./scripts/upload_to_seafile.sh -f $OUTPUT -s $DOMAIN -r $MILOCODEDATABASE_SEAFILE_REPO -t $SEAFILE_TOKEN
+  tags:
+    - LinuxDesktop
+
+deploy_windows_installer:
+  stage: deploy
+  variables:
+    DOMAIN: "https://seafile.milosolutions.com"
+  script:
+    - OUTPUT=./build/miloWizardInstaller_$(date +%Y.%m.%d).exe
+    - mv ./installer.exe $OUTPUT
+    - ./scripts/upload_to_seafile.sh -f $OUTPUT -s $DOMAIN -r $MILOCODEDATABASE_SEAFILE_REPO -t $SEAFILE_TOKEN
+  tags:
+    - LinuxDesktop
 
 build_docs:
   stage: documentation
