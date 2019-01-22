@@ -14,7 +14,7 @@ Installer Framework project. MCDB is a great way to skip all the mundane and
 boring code you have to write for each new project - here you get all the
 initial project code prepared and ready for further development.
 
-If you need some mobule for an existing project, see \ref subprojects. That page
+If you need some mobule for an existing project, see [subprojects](doc/subprojects.md). That page
 also contains links to online documentation.
 
 If you are creating a new project, you are encouraged to check our MCDB
@@ -22,7 +22,7 @@ installers. See the following sections for more details.
 
 # Subprojects
 
-Subproject documentation is listed [here](\ref subprojects).
+Subproject documentation is listed [here](doc/subprojects.md).
 
 # QtCreator Wizard
 
@@ -101,8 +101,8 @@ required is to:
 
 ## Building installer
 
-Instructions for building MCDB installer are listed
-[here](\ref buildinginstaller).
+Instructions for building Milo Wizard installer are listed
+[here](doc/buildinginstaller.md).
 
 
 ## Requirements for new modules
@@ -113,7 +113,7 @@ is only acting as a "home" to them all (mcdb-installer repository).
 
 All code has to be properly licensed, documented, contain readme and doxygen
 docs. More information about adding new modules is available in
-[Repository guide](\ref repositoryguide).
+[Repository guide](doc/repositoryguide.md).
 
 # License
 
@@ -122,6 +122,6 @@ file for details
 
 # Further reading 
 
-Checkout instructions are contained in \ref repositoryguide This document also
-contains hints on how to efficiently (and correctly) use this meta-repository
+Checkout instructions are contained in [Repository guide](doc/repositoryguide.md).
+This document also contains hints on how to efficiently (and correctly) use this meta-repository
 and all submodules.
