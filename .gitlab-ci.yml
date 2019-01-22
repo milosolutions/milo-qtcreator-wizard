@@ -40,7 +40,7 @@ build_linux_wizard_installer:
   variables:
     MILO_SERVER: "https://seafile.milosolutions.com"
   script:
-    - rm ./installer.run
+    - rm -f ./installer.run
     - ./scripts/wizard_generator/create_installer.sh ./installer.run /home/tools/Qt-OpenSource/Tools/QtInstallerFramework/3.0/bin/binarycreator
   tags:
     - LinuxDesktop
