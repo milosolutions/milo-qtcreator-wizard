@@ -15,6 +15,18 @@ before_script:
   - git submodule foreach git pull origin master
   #- git submodule foreach --recursive git checkout master && git pull origin master
 
+build_docs:
+  script:
+    # run doxygen with the appropriate doxyfile
+    - doxygen $CI_PROJECT_NAME.doxyfile
+
+    # move generated documentation to qtdocs/milo-code-db/$CI_PROJECT_NAME
+    - rm -rf /opt/online_docs/www/qtdocs/milo-code-db/wizard/
+    - mv doc/html /opt/online_docs/www/qtdocs/milo-code-db/wizard/
+  tags:
+    - Docs
+
+
 stages:
   - wizard
   - installers
