@@ -25,6 +25,3 @@
 [submodule "packages/mwizardtemplate"]
 	path = packages/mwizardtemplate
 	url = https://github.com/wkniec/mwizardtemplate.git
-[submodule "packages/msentry"]
-	path = packages/msentry
-	url = https://github.com/milosolutions/msentry.git
