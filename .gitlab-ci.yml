@@ -47,6 +47,7 @@ build_linux_wizard_installer:
   artifacts:
     paths:
     - installer.run
+    expire_in: 20 minutes
 
 build_windows_wizard_installer:
   stage: installers
@@ -60,6 +61,7 @@ build_windows_wizard_installer:
   artifacts:
     paths:
     - installer.exe
+    expire_in: 20 minutes
 
 deploy_linux_installer:
   stage: deploy
