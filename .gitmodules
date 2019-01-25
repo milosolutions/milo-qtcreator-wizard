@@ -24,4 +24,4 @@
 	url = https://github.com/milosolutions/mcrypto.git
 [submodule "packages/mwizardtemplate"]
 	path = packages/mwizardtemplate
-	url = ssh://git@git.milosolutions.com:8922/milo-code-database/mtemplatewizard.git
+	url = ../mtemplatewizard.git
