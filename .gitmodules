@@ -25,3 +25,6 @@
 [submodule "packages/mwizardtemplate"]
 	path = packages/mwizardtemplate
 	url = ../mtemplatewizard.git
+[submodule "packages/memailsystem"]
+	path = packages/memailsystem
+	url = ../memailsystem.git
