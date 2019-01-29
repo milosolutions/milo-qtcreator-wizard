@@ -28,3 +28,9 @@
 [submodule "packages/memailsystem"]
 	path = packages/memailsystem
 	url = ../memailsystem.git
+[submodule "packages/msshtunnel"]
+	path = packages/msshtunnel
+	url = ../msshtunnel.git
+[submodule "packages/mcalendar"]
+	path = packages/mcalendar
+	url = ../mcalendar.git
