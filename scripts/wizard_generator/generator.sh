@@ -14,9 +14,6 @@ packages/mlog/ \
 packages/mrestapi/ \
 packages/mscripts/ \
 packages/msentry/ \
-packages/memailsystem/ \
-packages/msshtunnel/ \
-packages/mcalendar/ \
 )
 
 # modules that should be checked as default in wizard
@@ -79,7 +76,8 @@ do
     module_files=$(find $MODULE -type f -not -path '*/\.g*' -not -path '*/meta/*')
     for modfile in $module_files
     do
-        prefix="$MODULE"data/milo/
+        prefix=packages/
+        #change prefix from modfile to "milo/" 
         target=milo/${modfile#"$prefix"}
         echo ,
         # creates file generator body
