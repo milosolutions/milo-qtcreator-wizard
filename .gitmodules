@@ -25,12 +25,12 @@
 [submodule "packages/mwizardtemplate"]
 	path = packages/mwizardtemplate
 	url = ../mtemplatewizard.git
-[submodule "packages/memailsystem"]
-	path = packages/memailsystem
-	url = ../memailsystem.git
 [submodule "packages/msshtunnel"]
 	path = packages/msshtunnel
 	url = ../msshtunnel.git
+[submodule "packages/memailsystem"]
+	path = packages/memailsystem
+	url = ../memailsystem.git
 [submodule "packages/mcalendar"]
 	path = packages/mcalendar
 	url = ../mcalendar.git

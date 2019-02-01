@@ -14,6 +14,9 @@ packages/mlog/ \
 packages/mrestapi/ \
 packages/mscripts/ \
 packages/msentry/ \
+packages/msshtunnel/ \
+packages/memailsystem/ \
+packages/mcalendar/ \
 )
 
 # modules that should be checked as default in wizard
