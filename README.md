@@ -3,8 +3,6 @@ Milo QtCreator wizard {#miloqtcreatorwizard}
 
 [TOC]
 
-Full documentation is available online - check it out [here](https://docs.milosolutions.com/milo-code-db/main).
-
 Source code: [GitHub](https://github.com/milosolutions)
 
 ![Milo Wizard](doc/img/wizard_selection.png "Milo wizard in QtCreator")
@@ -17,7 +15,7 @@ Installer Framework project. MCDB is a great way to skip all the mundane and
 boring code you have to write for each new project - here you get all the
 initial project code prepared and ready for further development.
 
-If you need some mobule for an existing project, see [subprojects](@ref subprojects). That page
+If you need some mobule for an existing project, see [subprojects](doc/subprojects.md). That page
 also contains links to online documentation.
 
 If you are creating a new project, you are encouraged to check our MCDB
@@ -105,7 +103,7 @@ required is to:
 ## Building installer
 
 Instructions for building Milo Wizard installer are listed
-[here](@ref buildinginstaller).
+[here](doc/buildinginstaller.md).
 
 
 ## Requirements for new modules
@@ -116,7 +114,7 @@ is only acting as a "home" to them all (mcdb-installer repository).
 
 All code has to be properly licensed, documented, contain readme and doxygen
 docs. More information about adding new modules is available in
-[Repository guide](@ref repositoryguide).
+[Repository guide](doc/repositoryguide.md).
 
 # License
 
@@ -125,6 +123,6 @@ file for details
 
 # Further reading 
 
-Checkout instructions are contained in [Repository guide](@ref repositoryguide).
-This document also contains hints on how to efficiently (and correctly) use this meta-repository
-and all submodules.
+Checkout instructions are contained in [Repository guide](doc/repositoryguide.md).
+This document also contains hints on how to efficiently (and correctly) use this
+meta-repository and all submodules.

@@ -1,30 +1,30 @@
 [submodule "packages/mbarcodescanner"]
 	path = packages/mbarcodescanner
-	url = https://github.com/milosolutions/mbarcodescanner.git
+	url = ../mbarcodescanner.git
 [submodule "packages/mcharts"]
 	path = packages/mcharts
-	url = https://github.com/milosolutions/mcharts.git
+	url = ../mcharts.git
 [submodule "packages/mconfig"]
 	path = packages/mconfig
-	url = https://github.com/milosolutions/mconfig.git
+	url = ../mconfig.git
 [submodule "packages/mlog"]
 	path = packages/mlog
-	url = https://github.com/milosolutions/mlog.git
+	url = ../mlog.git
 [submodule "packages/mrestapi"]
 	path = packages/mrestapi
-	url = https://github.com/milosolutions/mrestapi.git
+	url = ../mrestapi.git
 [submodule "packages/mscripts"]
 	path = packages/mscripts
-	url = https://github.com/milosolutions/mscripts.git
+	url = ../mscripts.git
 [submodule "packagesmsentry"]
 	path = packages/msentry
-	url = https://github.com/milosolutions/msentry.git
+	url = ../msentry.git
 [submodule "packages/mcrypto"]
 	path = packages/mcrypto
-	url = https://github.com/milosolutions/mcrypto.git
+	url = ../mcrypto.git
 [submodule "packages/mwizardtemplate"]
 	path = packages/mwizardtemplate
-	url = ../mtemplatewizard.git
+	url = ../mwizardtemplate.git
 [submodule "packages/msshtunnel"]
 	path = packages/msshtunnel
 	url = ../msshtunnel.git
