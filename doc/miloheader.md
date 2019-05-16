@@ -1,8 +1,13 @@
-Milo header {#miloHeader}
+Milo header {#miloheader}
 ===
 
 [TOC]
 
+# Header
+
+Use text below in all new C++ files added to Milo Code Database.
+
+~~~
 /*******************************************************************************
 Copyright (C) 2019 Milo Solutions
 Contact: https://www.milosolutions.com
@@ -25,4 +30,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 *******************************************************************************/
-
+~~~

@@ -36,3 +36,9 @@ your PC.
 7. [MCharts](\ref MCharts)
 8. [MSentry](\ref MSentry)
 9. [MCrypto](\ref MCrypto)
+
+# MD docs
+
+Just testin'.
+
+1. [New Project Template](../packages/mwizardtemplate/README.md)

@@ -25,7 +25,7 @@ installers. See the following sections for more details.
 
 # Subprojects
 
-Subproject documentation is listed [here](@ref subprojects).
+Subproject documentation is listed [here](doc/subprojects.md).
 
 # QtCreator Wizard
 
