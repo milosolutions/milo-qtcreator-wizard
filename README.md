@@ -1,3 +1,6 @@
+Milo QtCreator wizard {#miloqtcreatorwizard}
+===
+
 [TOC]
 
 Full documentation is available online - check it out [here](https://docs.milosolutions.com/milo-code-db/main).
@@ -102,7 +105,7 @@ required is to:
 ## Building installer
 
 Instructions for building Milo Wizard installer are listed
-[here](doc/buildinginstaller.md).
+[here](@ref buildinginstaller).
 
 
 ## Requirements for new modules
@@ -113,7 +116,7 @@ is only acting as a "home" to them all (mcdb-installer repository).
 
 All code has to be properly licensed, documented, contain readme and doxygen
 docs. More information about adding new modules is available in
-[Repository guide](doc/repositoryguide.md).
+[Repository guide](@ref repositoryguide).
 
 # License
 
@@ -122,6 +125,6 @@ file for details
 
 # Further reading 
 
-Checkout instructions are contained in [Repository guide](doc/repositoryguide.md).
+Checkout instructions are contained in [Repository guide](@ref repositoryguide).
 This document also contains hints on how to efficiently (and correctly) use this meta-repository
 and all submodules.

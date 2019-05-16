@@ -1,17 +1,19 @@
 Repository guide {#repositoryguide}
 ===
+
 [TOC]
 
-# Initial checkout # {#checkout}
+# Initial checkout {#checkout}
 
 To fully checkout (do it only once, when checking out the first time!):
 ~~~
-  git clone ssh://git@git.milosolutions.com:8922/milo-code-database/mcdb-installer.git
-  cd mcdb-installer
+  git clone ssh://git@git.milosolutions.com:8922/milo-code-database/milo-qtcreator-wizard.git
+  cd milo-qtcreator-wizard
   git submodule update --init --recursive
+  git submodule foreach git pull origin master
 ~~~
 
-# Update # {#update}
+# Update {#update}
 
 To update repo (each time you want to work on newest sources):
 ~~~
@@ -19,15 +21,15 @@ To update repo (each time you want to work on newest sources):
   git submodule update
 ~~~
 
-# Pull newest changes from all submodules # {#pull}
+# Pull newest changes from all submodules {#pull}
 
-This is a bit tricky: ```git submodule update``` only updates modules to newest
+This is a bit tricky: `git submodule update` only updates modules to newest
 version saved in parent repository. In order to really check out newest code
 from all submodules, you can do it:
 
-## Manually ## {#pull-manually}
+## Manually {#pull-manually}
 
-Call ```git pull``` in root dir, and then cd into all modules and manually call ```git pull``` there.
+Call `git pull` in root dir, and then cd into all modules and manually call `git pull` there.
 
 Then in root dir call:
 ~~~
@@ -37,7 +39,7 @@ git commit -a
 
 ## Automatically ## {#pull-auto}
 
-Use ```update-submodules``` command from sierdzio's Bash scripts: https://github.com/sierdzio/sierdzios-bash-scripts or use ```git pull --recurse-submodules```
+Use `update-submodules` command from sierdzio's Bash scripts: https://github.com/sierdzio/sierdzios-bash-scripts or use `git pull --recurse-submodules`
 
 Then, in root dir, call:
 ~~~
@@ -64,7 +66,7 @@ root repository. Below is a short info on how to do it:
 # Adding new module # {#add-submodule}
 
 1. Add new submodule repositories into 
-[milo-code-database](https://git.milosolutions.com/groups/milo-code-database) 
+[milo-code-database](https://git.milosolutions.com/milo-code-database)
 group on GitLab. If you lack permissions, ask your PPM about it.
 
 2. Add submodule repository into Milo Code DB installer:
@@ -88,7 +90,7 @@ other README in code DB repo).
 6. Add your submodule tag file path to TAGFILES to milocodedb.doxyfile
 
 7. Please remember to use \ref miloHeader in all header and source files within Milo Code Database - our clients need to be informed that this code is shared between various projects (across NDA boundaries). It is located in doc/miloheader.md file.
-You can also use ```scripts/insert_milo_header.sh``` script to add all headers automatically.
+You can also use `scripts/insert_milo_header.sh` script to add all headers automatically.
 
 8. Add build instructions to scripts/build_unix.sh and scripts/build_windows.bat
 
@@ -98,6 +100,6 @@ You can also use ```scripts/insert_milo_header.sh``` script to add all headers a
 
 # Further reading # {#further}
 
-More info: <a href="https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial">Submodule tutorial from kernel.org</a> 
+More info: [Submodule tutorial from kernel.org](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
 
-And: <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Submodule tutorial from official Git book</a> 
+And: [Submodule tutorial from official Git book](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

@@ -1,8 +1,10 @@
 Milo header {#miloHeader}
 ===
 
+[TOC]
+
 /*******************************************************************************
-Copyright (C) 2017 Milo Solutions
+Copyright (C) 2019 Milo Solutions
 Contact: https://www.milosolutions.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,6 +1,8 @@
 Documentation branding {#docbranding}
 ===
 
+[TOC]
+
 Milo Code DB uses custom branding for doxygen documentation. It is recommended
 to use it in your projects, too. This guide will help you get started.
 
