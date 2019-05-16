@@ -88,9 +88,9 @@ deploy_windows_installer:
 build_docs:
   stage: documentation
   script:
+    - doxygen --version
     # run doxygen with the appropriate doxyfile
     - doxygen $CI_PROJECT_NAME.doxyfile
-
     # move generated documentation to qtdocs/milo-code-db/$CI_PROJECT_NAME
     - rm -rf /opt/online_docs/www/docs_open_source/milo-code-db/main
     - mv doc/html /opt/online_docs/www/docs_open_source/milo-code-db/main

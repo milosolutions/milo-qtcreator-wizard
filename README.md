@@ -14,7 +14,7 @@ Installer Framework project. MCDB is a great way to skip all the mundane and
 boring code you have to write for each new project - here you get all the
 initial project code prepared and ready for further development.
 
-If you need some mobule for an existing project, see [subprojects](doc/subprojects.md). That page
+If you need some mobule for an existing project, see [subprojects](@ref subprojects). That page
 also contains links to online documentation.
 
 If you are creating a new project, you are encouraged to check our MCDB
@@ -22,7 +22,7 @@ installers. See the following sections for more details.
 
 # Subprojects
 
-Subproject documentation is listed [here](doc/subprojects.md).
+Subproject documentation is listed [here](@ref subprojects).
 
 # QtCreator Wizard
 
