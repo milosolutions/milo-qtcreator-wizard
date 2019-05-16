@@ -7,7 +7,7 @@ Milo DB is slowly growing. Below are 2 lists of modules: one set of links leads 
 
 # Online docs
 
-1. [New project template](https://github.com/milosolutions/mtemplatewizard/) template for all new Qt projects (QML and Widgets).
+1. [New project template](https://github.com/milosolutions/mwizardtemplate/) template for all new Qt projects (QML and Widgets).
 Contains a scaffolding for Qt app with documentation, tests, resources etc.
 2. [MScripts](https://github.com/milosolutions/mscripts/) scripts for integration with GitLab CI, Mattermost, versioning
 scripts for all platforms (including git SHA), and more
