@@ -45,7 +45,7 @@ them as git submodules.
 
 Each MCDB submodule contains a readme file and doxygen documentation, so refer
 to them for more info. All docs are also available
-[online](https://docs.milosolutions.com/milo-code-db/main/subprojects.html).
+[online](https://git.milosolutions.com/milo-code-database/milo-qtcreator-wizard/blob/master/doc/subprojects.md).
 
 ## Starting from wizard
 
@@ -97,6 +97,17 @@ required is to:
 3. You're ready!
 
 # Developing MCDB
+
+## Cloning git repository
+
+*This info is useful for Milo employees only*
+
+Clone this repository (milo-qtcreator-wizard) using either [Milo](https://git.milosolutions.com/milo-code-database/milo-qtcreator-wizard) repo or public
+[GitHub](https://github.com/milosolutions/milo-qtcreator-wizard) repository.
+
+Then checkout submodules manually or use `scripts/git_setup.sh`. Once you have
+some committed changes, you can use `scripts/git_push.sh` to push all submodules
+to both repositories.
 
 ## Building installer
 
