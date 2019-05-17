@@ -28,15 +28,15 @@ if [ -d .git ] && [ -d packages ] ; then
   echo "Fetching newest data"
   git submodule foreach git fetch
   echo "Checking out $BRANCH branches"
-  git submodule foreach git checkout "$BRANCH"
+  git submodule foreach git checkout $BRANCH
   if [[ ! -z "$MILO_GIT" ]] ; then
   echo "Adding GitLab remote"
     git remote add gitlab ssh://git@$MILO_GIT/milo-code-database/milo-qtcreator-wizard.git
-    git submodule foreach git remote add gitlab ssh://git@$MILO_GIT/milo-code-database/$name.git
+    git submodule foreach 'git remote add gitlab ssh://git@$MILO_GIT/milo-code-database/${name#packages/}.git'
   fi
   echo "Adding GitHub remote"
   git remote add github git@github.com:milosolutions/milo-qtcreator-wizard.git
-  git submodule foreach git remote add github git@github.com:milosolutions/$name.git
+  git submodule foreach 'git remote add github git@github.com:milosolutions/${name#packages/}.git'
   echo "Done. Remotes are:"
   git remote
   exit

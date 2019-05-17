@@ -18,16 +18,16 @@ IS_FOR_EACH=$2
 
 if [ -z "$IS_FOR_EACH" ] ; then
   echo "Pushing current dir to $BRANCH branch"
-  git push gitlab "$BRANCH"
-  git push github "$BRANCH"
+  git push 'gitlab $BRANCH'
+  git push 'github $BRANCH'
   git fetch
 else
   echo "Pushing all submodules to $BRANCH branch"
-  git push gitlab "$BRANCH"
-  git push github "$BRANCH"
-  git submodule foreach git push gitlab "$BRANCH"
-  git submodule foreach git push github "$BRANCH"
-  git submodule foreach git fetch
+  git push 'gitlab $BRANCH'
+  git push 'github $BRANCH'
+  git submodule foreach 'git push gitlab $BRANCH'
+  git submodule foreach 'git push github $BRANCH'
+  git submodule foreach 'git fetch'
 fi
 
 echo "Done"

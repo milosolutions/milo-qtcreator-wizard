@@ -16,7 +16,7 @@
 [submodule "packages/mscripts"]
 	path = packages/mscripts
 	url = ../mscripts.git
-[submodule "packagesmsentry"]
+[submodule "packages/msentry"]
 	path = packages/msentry
 	url = ../msentry.git
 [submodule "packages/mcrypto"]
