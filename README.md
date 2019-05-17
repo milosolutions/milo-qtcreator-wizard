@@ -1,7 +1,5 @@
-Milo QtCreator wizard {#miloqtcreatorwizard}
+Milo QtCreator wizard
 ===
-
-[TOC]
 
 Source code: [GitHub](https://github.com/milosolutions)
 
