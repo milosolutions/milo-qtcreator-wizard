@@ -32,7 +32,7 @@ if [ -d .git ] && [ -d packages ] ; then
   if [[ ! -z "$MILO_GIT" ]] ; then
   echo "Adding GitLab remote"
     git remote add gitlab ssh://git@$MILO_GIT/milo-code-database/milo-qtcreator-wizard.git
-    git submodule foreach git remote add gitlab ssh://$MILO_GIT/milo-code-database/$name.git
+    git submodule foreach git remote add gitlab ssh://git@$MILO_GIT/milo-code-database/$name.git
   fi
   echo "Adding GitHub remote"
   git remote add github git@github.com:milosolutions/milo-qtcreator-wizard.git
