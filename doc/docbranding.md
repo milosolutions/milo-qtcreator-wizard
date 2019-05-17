@@ -1,7 +1,5 @@
-Documentation branding {#docbranding}
+Documentation branding
 ===
-
-[TOC]
 
 # Branding
 

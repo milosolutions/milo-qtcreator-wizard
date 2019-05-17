@@ -1,7 +1,5 @@
-Milo header {#miloheader}
+Milo header
 ===
-
-[TOC]
 
 # Header
 

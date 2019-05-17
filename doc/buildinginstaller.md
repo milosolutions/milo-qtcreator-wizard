@@ -1,7 +1,5 @@
-Building installer {#buildinginstaller}
+Building installer
 ===
-
-[TOC]
 
 # CI builds # {#ci-build}
 

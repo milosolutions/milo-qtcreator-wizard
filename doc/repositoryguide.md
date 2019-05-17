@@ -1,9 +1,7 @@
-Repository guide {#repositoryguide}
+Repository guide
 ===
 
-[TOC]
-
-# Initial checkout {#checkout}
+# Initial checkout
 
 To fully checkout (do it only once, when checking out the first time!):
 ~~~
@@ -13,7 +11,7 @@ To fully checkout (do it only once, when checking out the first time!):
   git submodule foreach git pull origin master
 ~~~
 
-# Update {#update}
+# Update
 
 To update repo (each time you want to work on newest sources):
 ~~~
@@ -21,13 +19,13 @@ To update repo (each time you want to work on newest sources):
   git submodule update
 ~~~
 
-# Pull newest changes from all submodules {#pull}
+# Pull newest changes from all submodules
 
 This is a bit tricky: `git submodule update` only updates modules to newest
 version saved in parent repository. In order to really check out newest code
 from all submodules, you can do it:
 
-## Manually {#pull-manually}
+## Manually
 
 Call `git pull` in root dir, and then cd into all modules and manually call `git pull` there.
 
@@ -37,7 +35,7 @@ git status
 git commit -a
 ~~~
 
-## Automatically ## {#pull-auto}
+## Automatically
 
 Use `update-submodules` command from sierdzio's Bash scripts: https://github.com/sierdzio/sierdzios-bash-scripts or use `git pull --recurse-submodules`
 
@@ -47,7 +45,7 @@ git status
 git commit -a
 ~~~
 
-# What to do when I want to modify a submodule? # {#modify-submodule}
+# What to do when I want to modify a submodule?
 
 After updating code in a submodule, you need to commit the data to local (submodule)
 repository - just as if it was a normal repo. Then you need to go up and update the
@@ -63,7 +61,7 @@ root repository. Below is a short info on how to do it:
   git push
 ~~~
 
-# Adding new module # {#add-submodule}
+# Adding new module
 
 1. Add new submodule repositories into 
 [milo-code-database](https://git.milosolutions.com/milo-code-database)
@@ -98,7 +96,7 @@ You can also use `scripts/insert_milo_header.sh` script to add all headers autom
 
 10. You can either ask [PPM](https://wiki.milosolutions.com/index.php/PPM) to build the installer and upload it to Seafile, or you can do it yourself - use scripts/deploy.sh on Unix. On Windows the process is more manual - the installer has to be copied to Seafile by hand. In the future it is planned to build everything using CI.
 
-# Further reading # {#further}
+# Further reading
 
 More info: [Submodule tutorial from kernel.org](https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
 
