@@ -51,16 +51,19 @@
                 {
                     "source": "packages/mwizardtemplate/.clang-format",
                     "target": ".clang-format",
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
                 },
                 {
                     "source": "packages/mwizardtemplate/.gitignore",
                     "target": ".gitignore",
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/mwizardtemplate/.gitlab-ci.yml",
                     "target": ".gitlab-ci.yml",
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
