@@ -76,7 +76,7 @@ do
     # gets all files from module, except:
     # - files related with git (.git, .gitingore, ...)
     # - files inside meta directory
-    module_files=$(find $MODULE -type f -not -path '*/\.g*' -not -path '*/meta/*')
+    module_files=$(find $MODULE -type f -not -path '*/\.git' -not -path '*/meta/*')
     for modfile in $module_files
     do
         prefix=packages/
