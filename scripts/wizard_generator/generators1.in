@@ -7,7 +7,7 @@
                 {
                     "source": "packages/mwizardtemplate/doc/branding",
                     "target": "doc/branding",
-					"isBinary": true
+                    "isBinary": true
                 },
 				{
                     "source": "packages/mwizardtemplate/README.md",
@@ -17,7 +17,7 @@
                 {
                     "source": "packages/mwizardtemplate/AUTHORS.md",
                     "target": "AUTHORS.md",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
 				{
@@ -28,13 +28,13 @@
                 {
                     "source": "packages/mwizardtemplate/LICENSE-MiloCodeDB.txt",
                     "target": "LICENSE-MiloCodeDB.txt",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/mwizardtemplate/license-Qt.txt",
                     "target": "license-Qt.txt",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
@@ -49,9 +49,24 @@
                     "openAsProject": true
                 },
                 {
+                    "source": "packages/mwizardtemplate/.clang-format",
+                    "target": ".clang-format",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                },
+                {
+                    "source": "packages/mwizardtemplate/.gitignore",
+                    "target": ".gitignore",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
+                    "source": "packages/mwizardtemplate/.gitlab-ci.yml",
+                    "target": ".gitlab-ci.yml",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
                     "source": "packages/mwizardtemplate/template/platforms/android/android.pri",
                     "target": "%{ProjectName}/platforms/android/android.pri",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{AndroidChB}' === 'AndroidChBChecked'}"
                 },
                 {
@@ -62,7 +77,7 @@
                 {
                     "source": "packages/mwizardtemplate/template/platforms/windows/windows.pri",
                     "target": "%{ProjectName}/platforms/windows/windows.pri",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{WindowsChB}' === 'WindowsChBChecked'}"
                 },
                 {
@@ -88,7 +103,7 @@
                 {
                     "source": "packages/mwizardtemplate/README.md",
                     "target": "README.md",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
@@ -99,7 +114,7 @@
                 {
                     "source": "packages/mwizardtemplate/tests/helpers",
                     "target": "tests/helpers",
-					"isBinary": true,
+                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
