@@ -23,13 +23,14 @@ if [ -z "$IS_FOR_EACH" ] ; then
   git fetch
 else
   echo "Pushing all submodules to $BRANCH branch"
-  git push gitlab $BRANCH
-  git push github $BRANCH
   echo "Pushing $BRANCH to GitLab"
   git submodule foreach 'git push gitlab $BRANCH'
   echo "Pushing $BRANCH to GitHub"
   git submodule foreach 'git push github $BRANCH'
   git submodule foreach 'git fetch'
+  echo "Pushing parent repo"
+  git push gitlab $BRANCH
+  git push github $BRANCH
 fi
 
 echo "Done"
