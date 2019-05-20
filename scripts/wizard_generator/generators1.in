@@ -9,7 +9,7 @@
                     "target": "doc/branding",
                     "isBinary": true
                 },
-				{
+                {
                     "source": "packages/mwizardtemplate/README.md",
                     "target": "README.md",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
@@ -20,7 +20,7 @@
                     "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
-				{
+                {
                     "source": "packages/mwizardtemplate/version.pri",
                     "target": "version.pri",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
@@ -52,7 +52,7 @@
                     "source": "packages/mwizardtemplate/.clang-format",
                     "target": ".clang-format",
                     "isBinary": true,
-                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/mwizardtemplate/.gitignore",
