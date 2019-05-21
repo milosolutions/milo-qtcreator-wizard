@@ -30,7 +30,7 @@
                             {
                                 "trKey": "cmake",
                                 "value": "cmake",
-                                "condition": "%{JS: [ %{Plugins} ].indexOf('CmakeProjectManager') >= 0}"
+                                "condition": "%{JS: [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}"
                             }
                         ]
                     }
