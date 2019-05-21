@@ -26,6 +26,11 @@
                                 "trKey": "qmake",
                                 "value": "qmake",
                                 "condition": "%{JS: [ %{Plugins} ].indexOf('QmakeProjectManager') >= 0}"
+                            },
+                            {
+                                "trKey": "cmake",
+                                "value": "cmake",
+                                "condition": "%{JS: [ %{Plugins} ].indexOf('CmakeProjectManager') >= 0}"
                             }
                         ]
                     }
@@ -106,4 +111,3 @@
                         "trText": "Normal modules:"
                     }
                 }
-                

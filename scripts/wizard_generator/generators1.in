@@ -69,13 +69,11 @@
                 {
                     "source": "packages/mwizardtemplate/CMakeLists.txt",
                     "target": "CMakeLists.txt",
-                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
                     "source": "packages/mwizardtemplate/version.cmake",
                     "target": "version.cmake",
-                    "isBinary": true,
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
