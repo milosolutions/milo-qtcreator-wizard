@@ -77,6 +77,11 @@
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
+                    "source": "packages/mwizardtemplate/qtbase.cmake",
+                    "target": "qtbase.cmake",
+                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
+                },
+                {
                     "source": "packages/mwizardtemplate/template/platforms/android/android.pri",
                     "target": "%{ProjectName}/platforms/android/android.pri",
                     "isBinary": true,
@@ -96,11 +101,6 @@
                 {
                     "source": "packages/mwizardtemplate/template/template.pro",
                     "target": "%{ProjectName}/%{ProjectName}.pro",
-                    "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
-                },
-                {
-                    "source": "packages/mwizardtemplate/template/CMakeLists.txt",
-                    "target": "%{ProjectName}/CMakeLists.txt",
                     "condition": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}"
                 },
                 {
