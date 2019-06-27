@@ -5,6 +5,8 @@ Source code: [GitHub](https://github.com/milosolutions)
 
 ![Milo Wizard](doc/img/wizard_selection.png "Milo wizard in QtCreator")
 
+\tableofcontents
+
 # Intro
 
 Milo Code Database is the place where we keep all useful pieces of code:
