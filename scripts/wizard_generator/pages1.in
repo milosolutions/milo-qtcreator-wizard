@@ -60,47 +60,10 @@
                     "name": "NewProjectTemplateChB",
                     "trDisplayName": "New Project Template",
                     "type": "CheckBox",
+                    "enabled": false,
                     "data": {
                         "checked": true,
                         "checkedValue": "NewProjectTemplateChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "PlatformLabel",
-                    "type": "Label",
-                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
-                    "data": {
-                        "trText": "Platform:"
-                    }
-                },
-                {
-                    "name": "AndroidChB",
-                    "trDisplayName": "Android",
-                    "type": "CheckBox",
-                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
-                    "data": {
-                        "checkedValue": "AndroidChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "MacChB",
-                    "trDisplayName": "Mac",
-                    "type": "CheckBox",
-                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
-                    "data": {
-                        "checkedValue": "MacChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "WindowsChB",
-                    "trDisplayName": "Windows",
-                    "type": "CheckBox",
-                    "enabled": "%{JS: '%{NewProjectTemplateChB}' === 'NewProjectTemplateChBChecked'}",
-                    "data": {
-                        "checkedValue": "WindowsChBChecked",
                         "uncheckedValue": ""
                     }
                 },
