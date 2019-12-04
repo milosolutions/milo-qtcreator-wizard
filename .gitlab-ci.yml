@@ -54,7 +54,7 @@ build_windows_wizard_installer:
     MILO_SERVER: "https://seafile.milosolutions.com"
   script:
     - erase installer.exe
-    - scripts/wizard_generator/CreateWinInstaller.ps1 installer.exe "C:\Tools\Qt-OpenSource\Tools\QtInstallerFramework\3.0\bin\binarycreator.exe"
+    - powershell -File ./scripts/wizard_generator/CreateWinInstaller.ps1 installer.exe "C:\Tools\Qt-OpenSource\Tools\QtInstallerFramework\3.0\bin\binarycreator.exe"
   tags:
     - WindowsDesktop
   artifacts:
