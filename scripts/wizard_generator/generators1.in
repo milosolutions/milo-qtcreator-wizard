@@ -70,18 +70,8 @@
                     "target": "qtbase.cmake"
                 },
                 {
-                    "source": "packages/mwizardtemplate/platforms/android/android.pri",
-                    "target": "platforms/android/android.pri",
-                    "isBinary": true
-                },
-                {
-                    "source": "packages/mwizardtemplate/platforms/mac/mac.pri",
-                    "target": "platforms/mac/mac.pri"
-                },
-                {
-                    "source": "packages/mwizardtemplate/platforms/windows/windows.pri",
-                    "target": "platforms/windows/windows.pri",
-                    "isBinary": true
+                    "source": "packages/mwizardtemplate/platforms",
+                    "target": "platforms"
                 },
                 {
                     "source": "packages/mwizardtemplate/qml",
