@@ -1,7 +1,7 @@
 Subprojects
 ===
 
-Milo DB is slowly growing. Below are 2 lists of modules: one set of links leads to our online documentation, the other one can be used locally, if you build the docs on your machine (offline).
+Milo DB is slowly growing. Below are links which lead to github repositories.
 
 # Online docs
 
@@ -18,4 +18,4 @@ using QZXing library
 8. [MSentry](https://github.com/milosolutions/msentry/) - remote logger support (Sentry/ Raven). Easy to turn on and off, just with a config switch
 9. [MCrypto](https://github.com/milosolutions/mcrypto/) - AES module, containing simple and convenient API, based on OpenSSL and it has a fallback if OSSL is not available
 
-Instructions on how to add a new module are contained in [repositoryguide](repositoryguide.md).
+Instructions on how to add a new module are contained in [repositoryguide](doc/repositoryguide.md).
