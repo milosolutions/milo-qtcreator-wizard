@@ -1,0 +1,57 @@
+## Milo Solutions - doxygen conf for MiloCharts
+#
+#
+## (c) Milo Solutions, 2020
+
+DOXYFILE_ENCODING = UTF-8
+
+PROJECT_NAME = Milo-QtCreator-Wizard
+PROJECT_NUMBER = 1.0
+PROJECT_BRIEF = "Milo Code Database is the place where we keep all useful pieces of code: snippets, working modules, templates."
+
+OUTPUT_DIRECTORY = doc/
+
+INPUT = README.md doc/buildinginstaller.md  doc/docbranding.md  doc/miloheader.md doc/repositoryguide.md doc/subprojects.md
+#EXCLUDE_PATTERNS = */something/*
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT = YES
+TOC_INCLUDE_HEADINGS = 99
+
+RECURSIVE = FALSE
+QT_AUTOBRIEF = YES
+
+EXTRACT_ALL = YES
+EXTRACT_PRIVATE = YES
+EXTRACT_STATIC = YES
+
+DISTRIBUTE_GROUP_DOC = YES
+
+GENERATE_TAGFILE = milo-qtcreator-wizard.doxytag
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+GENERATE_RTF = NO
+GENERATE_MAN = NO
+GENERATE_XML = NO
+
+HTML_OUTPUT = html/
+HTML_FILE_EXTENSION = .html
+HTML_HEADER = doc/branding/milo-doxy-header.html
+HTML_FOOTER = doc/branding/milo-doxy-footer.html
+HTML_EXTRA_STYLESHEET= doc/branding/milo-doxygen.css
+HTML_EXTRA_FILES = doc/branding/milo.js doc/img/icon.png  doc/img/installer_intro.png  doc/img/installer_location.png  doc/img/logo.png  doc/img/wizard_build_system.png  doc/img/wizard_kits.png  doc/img/wizard_modules.png  doc/img/wizard_project_location.png  doc/img/wizard_selection.png  doc/img/wizard_summary.png
+
+IMAGE_PATH = doc/img
+
+TAB_SIZE = 4
+INHERIT_DOCS = YES
+BUILTIN_STL_SUPPORT = YES
+GENERATE_TODOLIST = YES
+
+ALLEXTERNALS = YES
+EXTERNAL_GROUPS = YES
+EXTERNAL_PAGES = YES
+
+HAVE_DOT = NO
+
+#TAGFILES = ../../../../../mcdb-installer.doxytag=../../../../../doc/html
+
