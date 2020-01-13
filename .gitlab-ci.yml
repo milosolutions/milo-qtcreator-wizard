@@ -89,7 +89,7 @@ deploy_docs_main_page:
   script:
     # move generated documentation to qtdocs/milo-code-db/$CI_PROJECT_NAME
     - rm -rf /opt/online_docs/www/docs_open_source/milo-code-db/doc
-    - cp doc /opt/online_docs/www/docs_open_source/milo-code-db/doc
+    - cp -r doc /opt/online_docs/www/docs_open_source/milo-code-db/doc
     - rm -f /opt/online_docs/www/docs_open_source/milo-code-db/index.html
     - cp index.html /opt/online_docs/www/docs_open_source/milo-code-db/index.html
   tags:
