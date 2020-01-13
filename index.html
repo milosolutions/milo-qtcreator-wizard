@@ -1,27 +1,14 @@
-    
 <!DOCTYPE HTML>
-<html>
-<head>
-	<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script
-  <meta charset="UTF-8"/>
-  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
-</head>
-
-<body>
-
-<script>
-  var request = new Request('https://raw.githubusercontent.com/milosolutions/mcdb-installer/master/README.md');
-
-  fetch(request, {mode: 'cors'})
-  .then(response => response.text()).then(data => {
-    var converter = new showdown.Converter();
-    document.body.innerHTML  = converter.makeHtml(data);
-  })
-  .catch(function(error) {  
-    console.log('Request failed', error)  
-  })
-</script>
-
-
-</body>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; url=https://docs.milosolutions.com/milo-code-db/milo-qtcreator-wizard/">
+        <script type="text/javascript">
+            window.location.href = "https://docs.milosolutions.com/milo-code-db/milo-qtcreator-wizard/"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        If you are not redirected automatically, follow this <a href='https://docs.milosolutions.com/milo-code-db/milo-qtcreator-wizard/'>link to example</a>.
+    </body>
 </html>
