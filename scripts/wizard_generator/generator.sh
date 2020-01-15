@@ -17,6 +17,7 @@ packages/msentry/ \
 packages/msshtunnel/ \
 packages/memailsystem/ \
 packages/mcalendar/ \
+packages/mmigrations/ \
 )
 
 # modules that should be checked as default in wizard
