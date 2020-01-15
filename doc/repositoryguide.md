@@ -69,23 +69,18 @@ group on GitLab. If you lack permissions, ask your PPM about it.
 
 2. Add submodule repository into Milo Code DB installer:
 ~~~
-git submodule add ssh://path.to.repository packages/com.milosolutions.modulename/data/modulename
+git submodule add ssh://path.to.repository packages/modulename
 ~~~
+Check and modify .gitmodules
 
-3. Copy the "meta" directory from any other module and adapt it to your needs.
-Meta dir contains the configuration and description for the module, which the
-installer will show (see [Qt Installer Framework](http://doc.qt.io/qtinstallerframework/)
-documentation for more info).
-Why such convoluted path you ask? Well, we are using Qt Installer Framework to 
-help with initial project setup, as well as to make it easy to add a module to
-a new project. These complicated paths are QtIFW requirement.
+3. Copy the "doc" directory from any other module and adapt it to your needs.
 
 4. Add backlink to project main page in README.md (see the first lines of any
 other README in code DB repo).
 
 5. Add link to new project documentation to main (installer) docs: docs/subprojects.md
 
-6. Add your submodule tag file path to TAGFILES to milocodedb.doxyfile
+6. ~~Add your submodule tag file path to TAGFILES to milocodedb.doxyfile~~ Copy .gitlab-ci.yml from other package and adapt it if necessary.
 
 7. Please remember to use \ref miloHeader in all header and source files within Milo Code Database - our clients need to be informed that this code is shared between various projects (across NDA boundaries). It is located in doc/miloheader.md file.
 You can also use `scripts/insert_milo_header.sh` script to add all headers automatically.
@@ -94,7 +89,13 @@ You can also use `scripts/insert_milo_header.sh` script to add all headers autom
 
 9. Add new module to GitLab CI at ci.milosolutions.com - you can copy and adjust the build script from any other module. CI only builds the documentation - DB installer needs to be built in another way
 
-10. You can either ask [PPM](https://wiki.milosolutions.com/index.php/PPM) to build the installer and upload it to Seafile, or you can do it yourself - use scripts/deploy.sh on Unix. On Windows the process is more manual - the installer has to be copied to Seafile by hand. In the future it is planned to build everything using CI.
+10. To incorporate your module in Milo Wizard:
+    1. Add your module to MODULES in generator.sh
+    2. Modify template.pro & test/tests.pro in mtemplatewizard module
+
+11. You can either ask [PPM](https://wiki.milosolutions.com/index.php/PPM) to build the installer and upload it to Seafile, or you can do it yourself - use scripts/deploy.sh on Unix. On Windows the process is more manual - the installer has to be copied to Seafile by hand. In the future it is planned to build everything using CI.
+
+
 
 # Further reading
 
