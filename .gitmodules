@@ -34,3 +34,6 @@
 [submodule "packages/mcalendar"]
 	path = packages/mcalendar
 	url = ../mcalendar.git
+[submodule "packages/mmigrations"]
+	path = packages/mmigrations
+	url = ../mmigrations.git

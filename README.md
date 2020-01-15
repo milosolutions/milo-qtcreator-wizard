@@ -39,6 +39,7 @@ using QZXing library
 10. [MSshTunnel](https://docs.milosolutions.com/milo-code-db/msshtunnel) - wraps ssh port forwarding functionality (a.k.a. SSH tunneling) with convinient class.
 11. [MCalendar](https://docs.milosolutions.com/milo-code-db/mcalendar) - provides calendar widget
 12. [MEmailSystem](https://docs.milosolutions.com/milo-code-db/memailsystem) - provides basic e-mail functionality.
+13. [MMigrations](https://docs.milosolutions.com/milo-code-db/mmigrations) - provides database migrations functionality.
 
 
 Instructions on how to add a new module are contained in [repositoryguide](doc/repositoryguide.md).
