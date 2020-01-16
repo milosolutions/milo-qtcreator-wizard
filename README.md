@@ -108,6 +108,17 @@ When the wizard work is done, QtCreator will open the .pro file
 You can start coding at this point!. See the README.md located in your newly installed project for further
 instructions.
 
+## Platforms
+Template wizard supports several platforms. If you want some additional features related to them simply check your platform in wizard (section above modules to choose)
+### Android
+### Mac
+Norarization is now supported. For more details check 'macos_build' in .gitlab-ci.yml file insade your generated project.
+### Linux
+System will try to detect your distribution and automatically craete deb or rpm package. To disable this use 'no-deploy' flag. 
+You can also create for example rpm package on debian related systems. To do so simply add rmpize to your config 
+and make sure you have needed tools (rpmbuild from rpm package).
+### Windows
+
 ## Using in existing project
 
 You can also easily add MCDB modules to an existing Qt project. All that is
