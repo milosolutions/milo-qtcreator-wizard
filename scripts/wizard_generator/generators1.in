@@ -42,7 +42,7 @@
                     "openAsProject": "%{JS: '%{BuildSystem}' === 'qmake' ? true : false }"
                 },
                 {
-                    "source": "packages/mwizardtemplate/CMakeLists.txt",
+                    "source": "packages/mwizardtemplate/CMakeLists.template",
                     "target": "CMakeLists.txt",
                     "openAsProject": "%{JS: '%{BuildSystem}' === 'cmake' ? true : false }"
                 },
@@ -57,7 +57,7 @@
                     "isBinary": true
                 },
                 {
-                    "source": "packages/mwizardtemplate/.gitlab-ci.yml",
+                    "source": "packages/mwizardtemplate/.gitlab-ci.template",
                     "target": ".gitlab-ci.yml",
                     "isBinary": true
                 },
