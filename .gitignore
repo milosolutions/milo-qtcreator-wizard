@@ -3,3 +3,6 @@ build-*
 miloinstaller
 *.doxytag
 doc/html/
+installer.run
+wizard.json
+

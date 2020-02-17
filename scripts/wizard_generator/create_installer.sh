@@ -4,7 +4,7 @@
 set -e
 
 if [ "${1}" = "-h" ] || [ "${1}" = "--help" ]; then
-  echo "Milo DB installer"
+  echo "Milo Code DB installer"
   echo
   echo "Usage: $(basename $0) output_file qtIfwPath [doxygenPath]"
   echo "This will only work when invoked from root repo dir"
