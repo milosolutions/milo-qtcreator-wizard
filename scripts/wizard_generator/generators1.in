@@ -70,10 +70,6 @@
                     "target": "qtbase.cmake"
                 },
                 {
-                    "source": "packages/mwizardtemplate/platforms",
-                    "target": "platforms"
-                },
-                {
                     "source": "packages/mwizardtemplate/qml",
                     "target": "qml"
                 },
@@ -95,27 +91,7 @@
                     "target": "Release.md"
                 },
                 {
-                    "source": "packages/mwizardtemplate/tests/helpers",
+                    "source": "packages/mwizardtemplate/tests",
                     "target": "tests/helpers",
                     "isBinary": true
-                },
-                {
-                    "source": "packages/mwizardtemplate/tests/Readme-tests.md",
-                    "target": "tests/Readme-tests.md"
-                },
-                {
-                    "source": "packages/mwizardtemplate/tests/testConfig.pri",
-                    "target": "tests/testConfig.pri"
-                },
-                {
-                    "source": "packages/mwizardtemplate/tests/tests.pro",
-                    "target": "tests/tests.pro"
-                },
-                {
-                    "source": "packages/mwizardtemplate/tests/tst_project/tst_project.pro",
-                    "target": "tests/tst_project/tst_project.pro"
-                },
-                {
-                    "source": "packages/mwizardtemplate/tests/tst_project/tst_template.cpp",
-                    "target": "tests/tst_project/tst_%{ProjectName}.cpp"
                 }
