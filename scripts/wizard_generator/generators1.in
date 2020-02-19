@@ -118,4 +118,4 @@
                 {
                     "source": "packages/mwizardtemplate/tests/tests.pro",
                     "target": "tests/tests.pro"
-                },
+                }
