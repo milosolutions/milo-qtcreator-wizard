@@ -94,12 +94,12 @@
                     "source": "packages/mwizardtemplate/tests/helpers",
                     "target": "tests/helpers",
                     "isBinary": true
-                }
+                },
                 {
                     "source": "packages/mwizardtemplate/tests/tst_utils_helpers",
                     "target": "tests/tst_utils_helpers",
                     "isBinary": true
-                }
+                },
                 {
                     "source": "packages/mwizardtemplate/tests/Readme-tests.md",
                     "target": "tests/Readme-tests.md",
