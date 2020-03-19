@@ -95,6 +95,10 @@
                     "target": "tests/helpers",
                     "isBinary": true
                 },
+				{
+					"source": "packages/mwizardtemplate/org.milosolutions.app.json.template",
+					"target": "org.milosolutions.%{ProjectName}.json"
+				},
                 {
                     "source": "packages/mwizardtemplate/tests/tst_utils_helpers",
                     "target": "tests/tst_utils_helpers",
