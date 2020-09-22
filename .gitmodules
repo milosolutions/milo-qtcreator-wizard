@@ -37,3 +37,6 @@
 [submodule "packages/mmigrations"]
 	path = packages/mmigrations
 	url = ../mmigrations.git
+[submodule "packages/mdatabase"]
+	path = packages/mdatabase
+	url = ../mdatabase.git
