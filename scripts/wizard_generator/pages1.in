@@ -50,13 +50,6 @@
             "typeId": "Fields",
             "data": [
                 {
-                    "name": "PlatformInfoLabel",
-                    "type": "Label",
-                    "data": {
-                        "trText": "Templated modules:"
-                    }
-                },
-                {
                     "name": "ModulesInfoLabel",
                     "type": "Label",
                     "data": {

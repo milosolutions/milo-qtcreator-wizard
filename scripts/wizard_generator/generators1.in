@@ -28,6 +28,11 @@
                     "isBinary": true
                 },
                 {
+                    "source": "packages/mwizardtemplate/LICENSE.md",
+                    "target": "LICENSE.md",
+                    "isBinary": true
+                },
+                {
                     "source": "packages/mwizardtemplate/license-Qt.txt",
                     "target": "license-Qt.txt",
                     "isBinary": true
