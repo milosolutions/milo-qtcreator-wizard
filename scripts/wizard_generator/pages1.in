@@ -57,49 +57,6 @@
                     }
                 },
                 {
-                    "name": "PlatformLabel",
-                    "type": "Label",
-                    "data": {
-                        "trText": "Platform:"
-                    }
-                },
-                {
-                    "name": "AndroidChB",
-                    "trDisplayName": "Android",
-                    "type": "CheckBox",
-                    "data": {
-                        "checkedValue": "AndroidChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "MacChB",
-                    "trDisplayName": "Mac",
-                    "type": "CheckBox",
-                    "data": {
-                        "checkedValue": "MacChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "WindowsChB",
-                    "trDisplayName": "Windows",
-                    "type": "CheckBox",
-                    "data": {
-                        "checkedValue": "WindowsChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
-                    "name": "LinuxChB",
-                    "trDisplayName": "Linux",
-                    "type": "CheckBox",
-                    "data": {
-                        "checkedValue": "LinuxChBChecked",
-                        "uncheckedValue": ""
-                    }
-                },
-                {
                     "name": "ModulesInfoLabel",
                     "type": "Label",
                     "data": {

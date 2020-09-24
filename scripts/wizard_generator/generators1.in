@@ -63,7 +63,8 @@
                 },
                 {
                     "source": "packages/mwizardtemplate/version.cmake",
-                    "target": "version.cmake"
+                    "target": "version.cmake",
+                    "isBinary": true
                 },
                 {
                     "source": "packages/mwizardtemplate/platforms",
