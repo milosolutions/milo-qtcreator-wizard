@@ -81,7 +81,8 @@
                 },
                 {
                     "source": "packages/mwizardtemplate/resources",
-                    "target": "resources"
+                    "target": "resources",
+                    "isBinary": true
                 },
                 {
                     "source": "packages/mwizardtemplate/src",
