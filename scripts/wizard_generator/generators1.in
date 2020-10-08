@@ -62,8 +62,13 @@
                     "isBinary": true
                 },
                 {
-                    "source": "packages/mwizardtemplate/.gitlab-ci.template",
+                    "source": "packages/mwizardtemplate/.gitlab-ci.yml",
                     "target": ".gitlab-ci.yml",
+                    "isBinary": true
+                },
+                {
+                    "source": "packages/mwizardtemplate/.gitlab-ci.qmake.yml",
+                    "target": ".gitlab-ci.qmake.yml",
                     "isBinary": true
                 },
                 {
