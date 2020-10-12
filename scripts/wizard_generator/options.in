@@ -5,6 +5,6 @@
         { "key": "QbsFile", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'qbs')}" },
         { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
         { "key": "CppFileName", "value": "%{JS: 'main.' + Util.preferredSuffix('text/x-c++src')}" },
-        { "key": "GitServer", "value": "value('GitServerPath')" }
+        { "key": "GitServer", "value": "%{JS: value('GitServerPath')}" }
     ],
 
