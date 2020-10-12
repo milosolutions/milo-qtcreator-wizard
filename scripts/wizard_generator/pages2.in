@@ -2,6 +2,41 @@
             ]
         },
         {
+            "trDisplayName": "Select module checkout type",
+            "trShortTitle": "Module checkout",
+            "typeId": "Fields",
+            "data": [
+                {
+                    "name": "CheckoutType",
+                    "trDisplayName": "Select module checkout type:",
+                    "type": "ComboBox",
+                    "enabled": "%{JS: value('BuildSystem') === 'cmake'? 'true' : 'false'}",
+                    "data":
+                    {
+                        "index": 0,
+                        "disabledIndex": 0,
+                        "items":
+                        [
+                            {
+                                "trKey": "Copy module source code",
+                                "value": "Copy"
+                            },
+                            {
+                                "trKey": "Add modules as git submodules",
+                                "value": "Submodule"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "GitServerPath",
+                    "trDisplayName": "URL of the git server:",
+                    "mandatory": "%{JS: value('CheckoutType') === 'Submodule'? 'true' : 'false'}",
+                    "enabled": "%{JS: value('CheckoutType') === 'Submodule'? 'true' : 'false'}",
+                    "type": "LineEdit"
+                }
+        },
+        {
             "trDisplayName": "Project Management",
             "trShortTitle": "Summary",
             "typeId": "Summary"

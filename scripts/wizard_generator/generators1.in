@@ -77,6 +77,10 @@
                     "isBinary": true
                 },
                 {
+                    "source": "packages/mwizardtemplate/first-time-setup.cmake.template",
+                    "target": "first-time-setup.cmake"
+                },
+                {
                     "source": "packages/mwizardtemplate/platforms",
                     "target": "platforms"
                 },
