@@ -36,7 +36,7 @@
                     "data":
                     {
                         "wordWrap": true,
-                        "trText": "Git server URL should contain all the data necessary to run 'git submodule add' command. For example: 'git@github.com:milosolutions' or 'ssh://git@git.milosolutions.com:port/milo-code-database'",
+                        "trText": "Git server URL should contain all the data necessary to run 'git submodule add' command. For example: 'git@github.com:milosolutions' or 'ssh://git@git.milosolutions.com:port/milo-code-database'"
                     }
                 },
                 {
