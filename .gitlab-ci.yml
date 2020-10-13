@@ -1,5 +1,5 @@
 before_script:
-  # If during build on WindowsDesktop runner, you get some errors about long of file for example: 
+  # If during build on WindowsDesktop runner, you get some errors about long of file for example:
   # "error: unable to create file... : Filename too long "
   # run your build with this command once ( on linux machine this will cause an error: Permission denied )
   #- git config --system core.longpaths true
@@ -11,18 +11,15 @@ before_script:
   - set USERPROFILE=C:\Users\gitlab-runner
 
   - git submodule sync --recursive
-  - git submodule update --init --recursive 
+  - git submodule update --init --recursive
   - git submodule foreach git pull origin master
   #- git submodule foreach --recursive git checkout master && git pull origin master
-
-
 
 stages:
   - wizard
   - installers
   - deploy
   - documentation
-
 
 generate_wizard:
   stage: wizard
@@ -33,7 +30,6 @@ generate_wizard:
     paths:
     - wizard.json
     #expire_in: 20 minutes
-
 
 build_linux_wizard_installer:
   stage: installers
@@ -90,7 +86,7 @@ generate_and_deploy_docs:
   script:
         # run doxygen with the appropriate doxyfile
     - doxygen $CI_PROJECT_NAME.doxyfile
-    
+
     # move generated documentation to qtdocs/milo-code-db/$CI_PROJECT_NAME
     - rm -rf /opt/online_docs/www/docs_open_source/milo-code-db/$CI_PROJECT_NAME/
     - mv doc/html /opt/online_docs/www/docs_open_source/milo-code-db/$CI_PROJECT_NAME/
