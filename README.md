@@ -15,8 +15,9 @@ Installer Framework project. MCDB is a great way to skip all the mundane and
 boring code you have to write for each new project - here you get all the
 initial project code prepared and ready for further development.
 
-If you need some mobule for an existing project, see [subprojects](doc/subprojects.md). That page
-also contains links to online documentation.
+If you need some mobule for an existing project, see
+[subprojects](doc/subprojects.md). That page also contains links to online
+documentation.
 
 If you are creating a new project, you are encouraged to check our MCDB
 installers. See the following sections for more details.
@@ -52,8 +53,8 @@ You can find prebuilt installers of Milo QtCreator Wizard on our
 The wizard is the quickest way to create a new project: with all
 necessary boilerplate code in place. The .pro file, CMakeLists.txt, doxygen,
 logger, build helpers, CI scripts, config classes... everything you choose
-to include (the process is customizable) will be extracted to a single place
-- all that is left for you is start coding the interesting bits!
+to include (the process is customizable) will be extracted to a single
+place - all that is left for you is start coding the interesting bits!
 
 # Using MCDB
 
@@ -114,16 +115,15 @@ be ready to be used, either with raw qmake or with Qt Creator.
 Last step is a choice: should Milo Code Database modules be copied into your
 new project, or included as `git submodule`?
 
-"Copy" option will copy all files from each selected submodules into your
+* "Copy" option will copy all files from each selected submodules into your
 project. It will be a verbatim copy and the files will have no connection to
-their git repositories.
-
-"Git submodule" option will add Milo Code Database modules as git
+their git repositories
+* "Git submodule" option will add Milo Code Database modules as git
 submodules. Make sure to initialize and update them after the wizard is
 done. You can learn more about git submodules
 [here](https://git-scm.com/docs/git-submodule). To properly initialize the
 submodules, you need to specify the base URL for git git repos. For example,
-GitHub base URL is: `git@github.com:milosolutions`.
+GitHub base URL is: `git@github.com:milosolutions`
 
 **Initializing git submodules automatically only works with `cmake`
 projects.**
@@ -132,7 +132,7 @@ Using git submodules is recommended - this way it's easy to stay up to date
 with new changes in Milo Code Database modules. It's also easy to contribute
 fixes and changes back to MCDB.
 
-***Note:*** if the client will ever need access to git repository, make sure
+**Note:** if the client will ever need access to git repository, make sure
 to use GitHub address for MCDB modules. This way they client won't have any
 problems when trying to fetch data from Milo GitLab instance.
 
@@ -213,11 +213,13 @@ required is to:
 # Developing MCDB
 
 *This info is useful for people who want to contribute to Milo Code
-Database*
+Database.*
 
 ## Cloning git repository
 
-Clone this repository (milo-qtcreator-wizard) using either [Milo](https://git.milosolutions.com/milo-code-database/milo-qtcreator-wizard) repo or public
+Clone this repository (milo-qtcreator-wizard) using either
+[Milo](https://git.milosolutions.com/milo-code-database/milo-qtcreator-wizard)
+repo or public
 [GitHub](https://github.com/milosolutions/milo-qtcreator-wizard) repository.
 
 Then checkout submodules manually or use `scripts/git_setup.sh`. Once you
@@ -242,11 +244,11 @@ docs. More information about adding new modules is available in
 # License
 
 This project is licensed under the MIT License - see the
-LICENSE-MiloCodeDB.txt file for details.
+`LICENSE-MiloCodeDB.txt` file for details.
 
 # Further reading
 
 Checkout instructions are contained in
-[Repository guide](doc/repositoryguide.md).
-This document also contains hints on how to efficiently (and correctly) use
-this meta-repository and all submodules.
+[Repository guide](doc/repositoryguide.md). This document also contains
+hints on how to efficiently (and correctly) use this meta-repository and all
+submodules.
