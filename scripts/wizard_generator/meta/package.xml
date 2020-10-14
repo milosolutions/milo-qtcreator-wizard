@@ -3,7 +3,7 @@
     <DisplayName>Milo wizard for QtCreator</DisplayName>
     <Description>Wizard.</Description>
     <Version>1</Version>
-    <ReleaseDate>2020-02-14</ReleaseDate>
+    <ReleaseDate>2020-10-14</ReleaseDate>
     <Licenses>
         <License name="Default Milo license" file="license.txt" />
     </Licenses>

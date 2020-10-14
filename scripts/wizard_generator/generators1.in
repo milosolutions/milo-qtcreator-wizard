@@ -38,8 +38,9 @@
                     "isBinary": true
                 },
                 {
-                    "source": "packages/mwizardtemplate/mwizardtemplate.doxyfile.in",
-                    "target": "%{ProjectName}.doxyfile.in"
+                    "source": "packages/mwizardtemplate/Doxyfile.in",
+                    "target": "Doxyfile.in",
+                    "isBinary": true
                 },
                 {
                     "source": "packages/mwizardtemplate/template.pro",
@@ -47,7 +48,7 @@
                     "openAsProject": "%{JS: '%{BuildSystem}' === 'qmake' ? true : false }"
                 },
                 {
-                    "source": "packages/mwizardtemplate/CMakeLists.template",
+                    "source": "packages/mwizardtemplate/CMakeLists.txt",
                     "target": "CMakeLists.txt",
                     "openAsProject": "%{JS: '%{BuildSystem}' === 'cmake' ? true : false }"
                 },
